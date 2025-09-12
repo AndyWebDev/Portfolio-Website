@@ -9,23 +9,23 @@ const toggleBtn = document.getElementById("toggleBtn");
 const iconSun = document.getElementById("iconSun");
 const iconMoon = document.getElementById("iconMoon");
 
-// Start page in light mode regardless of system preference
+// Get elements
+const htmlEl = document.documentElement;
+const toggleBtn = document.getElementById("toggleBtn");
+const iconSun = document.getElementById("iconSun");
+const iconMoon = document.getElementById("iconMoon");
+
+// Force light mode on page load
 htmlEl.classList.remove("dark");
 iconSun.classList.remove("hidden");
 iconMoon.classList.add("hidden");
 
-// Toggle dark/light mode
+// Toggle dark/light mode on button click
 toggleBtn.addEventListener("click", () => {
-  const isDark = htmlEl.classList.toggle("dark");
-
-  // Swap icons
-  iconSun.classList.toggle("hidden", isDark);
-  iconMoon.classList.toggle("hidden", !isDark);
-
-  // Save preference for this page (optional)
-  // localStorage.theme = isDark ? "dark" : "light";
+  const isDark = htmlEl.classList.toggle("dark"); // add/remove dark class
+  iconSun.classList.toggle("hidden", isDark); // hide sun if dark
+  iconMoon.classList.toggle("hidden", !isDark); // hide moon if light
 });
-
 // Toggle mobile menu
 
 const menuToggle = document.getElementById("menu-toggle");
