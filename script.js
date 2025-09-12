@@ -134,22 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const bars = document.querySelectorAll(".animate-progress");
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const bar = entry.target;
-          const target = bar.getAttribute("data-width");
-          bar.style.width = target; // animate the bar
-          observer.unobserve(bar); // stop observing once animated
+          const target = bar.dataset.width;
+
+          // Force a reflow so the browser registers width:0 before setting the target
+          bar.style.width = "0";
+          void bar.offsetWidth; // <-- key line
+
+          // Small delay ensures the 0-width paint happens before we set the real width
+          setTimeout(() => {
+            bar.style.width = target;
+          }, 50);
+
+          obs.unobserve(bar);
         }
       });
     },
-    {
-      threshold: 0.5, // trigger when 50% of the bar is visible
-    }
+    { threshold: 0.5 }
   );
 
-  bars.forEach((bar) => {
-    observer.observe(bar);
-  });
+  bars.forEach((bar) => observer.observe(bar));
 });
