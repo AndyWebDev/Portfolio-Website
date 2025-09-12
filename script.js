@@ -1,28 +1,25 @@
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   // ==== THEME TOGGLE ====
-  const htmlEl = document.documentElement;
+  // Theme toggle
   const toggleBtn = document.getElementById("themeToggle");
   const iconSun = document.getElementById("iconSun");
   const iconMoon = document.getElementById("iconMoon");
 
-  // Set initial theme
-  if (localStorage.theme === "dark") {
-    htmlEl.classList.add("dark");
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "dark") {
+    document.documentElement.classList.add("dark");
     iconSun.classList.add("hidden");
     iconMoon.classList.remove("hidden");
-  } else {
-    htmlEl.classList.remove("dark");
-    iconSun.classList.remove("hidden");
-    iconMoon.classList.add("hidden");
   }
 
-  // Toggle on click
   toggleBtn.addEventListener("click", () => {
-    const isDark = htmlEl.classList.toggle("dark");
-    localStorage.theme = isDark ? "dark" : "light";
-    iconSun.classList.toggle("hidden", isDark);
-    iconMoon.classList.toggle("hidden", !isDark);
+    document.documentElement.classList.toggle("dark");
+    const isDark = document.documentElement.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    iconSun.classList.toggle("hidden");
+    iconMoon.classList.toggle("hidden");
   });
 
   // ==== MOBILE MENU TOGGLE ====
