@@ -23,7 +23,7 @@
     <!-- NavBar -->
     <header class="bg-black">
       <div
-        class="w-full h-22 flex justify-between align-center gap-6 bg-black border-b-2 border-cyan-300"
+        class="w-full h-22 max-w-7xl mx-auto flex justify-between align-center gap-6 bg-black"
       >
         <div id="logo" class="max-h-20 aspect-square m-auto">
           <img src="images\logo\logoDarkGrey.png" alt="BuiltByAndy logo" />
@@ -66,7 +66,7 @@
     <!-- Hero section -->
     <section
       id="hero"
-      class="relative w-full h-[80vh] flex flex-col items-center justify-center border-b-2 border-cyan-300 overflow-hidden"
+      class="relative w-full h-full flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
     >
       <!-- Background image -->
       <img
@@ -612,7 +612,7 @@
         </p>
 
         <!-- Centering div for 3 sections -->
-        <div class="flex justify-center gap-3 mb-5">
+        <div class="flex justify-center flex-wrap gap-3 mb-5">
           <p
             class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm min-h-[3rem]"
           >
@@ -793,6 +793,7 @@
           method="POST"
           netlify-honeypot="bot-field"
           data-netlify="true"
+          name="contact"
         >
           <!-- Full Name -->
           <div>
