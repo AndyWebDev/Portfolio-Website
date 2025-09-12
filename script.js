@@ -1,6 +1,7 @@
+// v2 release
+
 // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // ==== THEME TOGGLE ====
   // Theme toggle
   const toggleBtn = document.getElementById("themeToggle");
   const iconSun = document.getElementById("iconSun");
@@ -126,5 +127,29 @@ document.addEventListener("DOMContentLoaded", function () {
   acceptBtn.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
     overlay.classList.add("hidden");
+  });
+
+  //====Bar filling====
+
+  const bars = document.querySelectorAll(".animate-progress");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const target = bar.getAttribute("data-width");
+          bar.style.width = target; // animate the bar
+          observer.unobserve(bar); // stop observing once animated
+        }
+      });
+    },
+    {
+      threshold: 0.5, // trigger when 50% of the bar is visible
+    }
+  );
+
+  bars.forEach((bar) => {
+    observer.observe(bar);
   });
 });

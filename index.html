@@ -1,3 +1,4 @@
+<!-- v2 release -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -150,6 +151,10 @@
         <div
           id="bubble6"
           class="absolute w-20 h-20 rounded-full bg-blue-400/60"
+        ></div>
+        <div
+          id="bubble7"
+          class="absolute w-20 h-20 rounded-full bg-cyan-200/60"
         ></div>
       </div>
 
@@ -321,8 +326,8 @@
           </p>
           <p class="text-left mt-2">
             When I’m not coding, I enjoy exploring new technologies or spending
-            time outdoors in the Scottish countryside through motorcycling,
-            kayaking, hillwalking, and camping.
+            time outdoors in the Scottish countryside (motorcycling, kayaking,
+            hillwalking, and camping).
           </p>
         </div>
         <!-- Cards columns -->
@@ -341,7 +346,7 @@
               Clean Code
             </p>
             <p class="text-slate-800 text-center text-sm p-1">
-              Writing maintanable, scalable and well-documented code.
+              Writing maintainable, scalable and well-documented code.
             </p>
           </div>
 
@@ -374,7 +379,7 @@
               Creative solutions
             </p>
             <p class="text-slate-800 text-center text-sm p-1">
-              Innovative approaches to complex web chalenges.
+              Innovative approaches to complex web challenges.
             </p>
           </div>
           <div
@@ -390,7 +395,7 @@
               User-Centered
             </p>
             <p class="text-slate-800 text-center text-sm p-1">
-              Writing with acesability and user experience in mind.
+              Creating websites with accessibility and user experience in mind.
             </p>
           </div>
         </div>
@@ -427,7 +432,8 @@
               >
                 <div
                   class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  style="--w: 97%"
+                  data-width="97%"
+                  style="width: 0; transition: width 1.5s ease-out"
                 ></div>
               </div>
             </div>
@@ -445,201 +451,203 @@
               <div
                 class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
               >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  style="--w: 95%"
-                ></div>
-              </div>
-            </div>
-
-            <!-- JavaScript -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >JavaScript</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >90%</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  style="--w: 90%"
-                ></div>
-              </div>
-            </div>
-
-            <!-- TailwindCSS -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >TailwindCSS</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >96%</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  style="--w: 96%"
-                ></div>
-              </div>
-            </div>
-
-            <!-- React (loading) -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >React</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >Currently loading...</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-                ></div>
-              </div>
-            </div>
-
-            <!-- Figma (loading) -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >Figma</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >Currently loading...</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-                ></div>
-              </div>
-            </div>
-
-            <!-- Parallax (loading) -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >Parallax</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >Currently loading...</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-                ></div>
-              </div>
-            </div>
-
-            <!-- WordPress/Wix -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >WordPress / Wix</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >96%</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  style="--w: 96%"
-                ></div>
+                <div class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4
+                rounded-full animate-progress" data-width="95%" style="width: 0;
+                transition: width 1.5s ease-out;"" >
               </div>
             </div>
           </div>
+
+          <!-- JavaScript -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >JavaScript</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >90%</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
+                data-width="90%"
+                style="width: 0; transition: width 1.5s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- TailwindCSS -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >TailwindCSS</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >96%</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
+                data-width="96%"
+                style="width: 0; transition: width 1.5s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- React (loading) -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >React</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >Currently loading...</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Figma (loading) -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >Figma</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >Currently loading...</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Parallax (loading) -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >Parallax</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >Currently loading...</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
+              ></div>
+            </div>
+          </div>
+
+          <!-- WordPress/Wix -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >WordPress / Wix</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >96%</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
+                data-width="97%"
+                style="width: 0; transition: width 1.5s ease-out"
+              ></div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="flex flex-col justify-center space-y-6">
-          <h2
-            class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
+      <div class="flex flex-col justify-center space-y-6">
+        <h2
+          class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
+        >
+          Services You Can Consume
+        </h2>
+
+        <div class="flex flex-col gap-4 w-full">
+          <!-- Standard Template Website -->
+          <div
+            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
           >
-            Services You Can Consume
-          </h2>
-
-          <div class="flex flex-col gap-4 w-full">
-            <!-- Standard Template Website -->
-            <div
-              class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+            <span class="font-semibold mb-2 text-center dark:text-gray-300">
+              Standard Template Website (WordPress, Wix, etc.)
+            </span>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
-              <span class="font-semibold mb-2 text-center dark:text-gray-300">
-                Standard Template Website (WordPress, Wix, etc.)
-              </span>
-              <p
-                class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-              >
-                Up to 5 pages or sections, fully functional using pre-built
-                templates. Ideal for small businesses who want a fast, reliable
-                website.
-              </p>
-            </div>
+              Up to 5 pages or sections, fully functional using pre-built
+              templates. Ideal for small businesses who want a fast, reliable
+              website.
+            </p>
+          </div>
 
-            <!-- Custom Website -->
-            <div
-              class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          <!-- Custom Website -->
+          <div
+            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          >
+            <span class="font-semibold mb-2 text-center dark:text-gray-300">
+              Custom Website (5+ pages, coded)
+            </span>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
-              <span class="font-semibold mb-2 text-center dark:text-gray-300">
-                Custom Website (5+ pages, coded)
-              </span>
-              <p
-                class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-              >
-                Complete custom development with modern technologies. I can
-                implement your design or create a design from scratch tailored
-                to your brand.
-              </p>
-            </div>
+              Complete custom development with modern technologies. I can
+              implement your design or create a design from scratch tailored to
+              your brand.
+            </p>
+          </div>
 
-            <!-- Hosting Services -->
-            <div
-              class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          <!-- Hosting Services -->
+          <div
+            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          >
+            <span class="font-semibold mb-2 text-center dark:text-gray-300"
+              >Hosting Services</span
             >
-              <span class="font-semibold mb-2 text-center dark:text-gray-300"
-                >Hosting Services</span
-              >
-              <p
-                class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-              >
-                Reliable hosting setup and management to keep your website fast,
-                secure, and online 24/7.
-              </p>
-            </div>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
+            >
+              Reliable hosting setup and management to keep your website fast,
+              secure, and online 24/7.
+            </p>
+          </div>
 
-            <!-- Ongoing Website Updates -->
-            <div
-              class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          <!-- Ongoing Website Updates -->
+          <div
+            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
+          >
+            <span class="font-semibold mb-2 text-center dark:text-gray-300"
+              >Ongoing Website Updates & Changes</span
             >
-              <span class="font-semibold mb-2 text-center dark:text-gray-300"
-                >Ongoing Website Updates & Changes</span
-              >
-              <p
-                class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-              >
-                Only for websites I created. Regular updates, bug fixes, and
-                feature additions.
-              </p>
-            </div>
+            <p
+              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
+            >
+              Only for websites I created. Regular updates, bug fixes, and
+              feature additions.
+            </p>
           </div>
         </div>
       </div>
@@ -656,7 +664,7 @@
           Let's build something amazing!
         </h1>
         <p class="text-lg font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
-          I'm always excited to work on new projects or collaborate with fellow
+          I'm always excited to work on new projects or collaborate with
           creators. Whether you have a clear vision or just an idea, let's
           discuss how we can bring it to life.
         </p>
@@ -1045,10 +1053,16 @@
         <p
           class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 flex justify-center items-center gap-2 md:gap-4"
         >
-          © Copyright<span id="year"></span> 
-          <p class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50" >All Rights Reserved by BuiltByAndy</p>
+          © Copyright<span id="year"></span>
+        </p>
 
-<p class="text-center">
+        <p
+          class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
+        >
+          All Rights Reserved by BuiltByAndy
+        </p>
+
+        <p class="text-center">
           <a
             href="Privacy-policy.html"
             target="_blank"
@@ -1056,8 +1070,8 @@
           >
             Privacy Policy
           </a>
-          </p>
         </p>
+
         <p
           class="text-lg mt-3 text-center text-gray-50 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4"
         ></p>

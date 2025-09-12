@@ -1,3 +1,5 @@
+/* v2 release */
+
 .gradient-border {
   border-image-slice: 1;
   border-width: 2px;
@@ -58,18 +60,13 @@
   left: 20%;
   animation: floatXY 35s ease-in-out infinite;
 }
-
-/* Animate progress bar from 0 to custom width */
-@keyframes fill-bar {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: var(--w);
-  }
+#bubble7 {
+  left: 40%;
+  animation: floatXY 20s ease-in-out infinite;
 }
 
+/* Animate progress bar from 0 to custom width */
 .animate-progress {
   width: 0;
-  animation: fill-bar 1.5s ease-out forwards;
+  transition: width 2.5s ease-out;
 }
