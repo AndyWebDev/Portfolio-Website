@@ -1,14 +1,3 @@
-// Grab DOM elements
-const htmlEl = document.documentElement;
-const toggleBtn = document.getElementById("themeToggle");
-const iconSun = document.getElementById("iconSun");
-const iconMoon = document.getElementById("iconMoon");
-
-const htmlEl = document.documentElement;
-const toggleBtn = document.getElementById("toggleBtn");
-const iconSun = document.getElementById("iconSun");
-const iconMoon = document.getElementById("iconMoon");
-
 // Get elements
 const htmlEl = document.documentElement;
 const toggleBtn = document.getElementById("toggleBtn");
