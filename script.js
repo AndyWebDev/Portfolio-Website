@@ -4,25 +4,22 @@ const toggleBtn = document.getElementById("themeToggle");
 const iconSun = document.getElementById("iconSun");
 const iconMoon = document.getElementById("iconMoon");
 
-// Initialize icons based on saved preference
-if (localStorage.theme === "dark") {
-  htmlEl.classList.add("dark");
-  iconSun.classList.add("hidden");
-  iconMoon.classList.remove("hidden");
-} else {
-  htmlEl.classList.remove("dark");
-  iconSun.classList.remove("hidden");
-  iconMoon.classList.add("hidden");
-}
+// Always start light, ignore existing theme
+htmlEl.classList.remove("dark");
+iconSun.classList.remove("hidden");
+iconMoon.classList.add("hidden");
 
 // Toggle dark/light mode on button click
 toggleBtn.addEventListener("click", () => {
   const isDark = htmlEl.classList.toggle("dark");
-  localStorage.theme = isDark ? "dark" : "light";
 
   // Swap icons
   iconSun.classList.toggle("hidden", isDark);
   iconMoon.classList.toggle("hidden", !isDark);
+
+  // Save choice only for this page/session
+  // Optionally, you can skip saving to localStorage if you want it to reset next visit
+  // localStorage.theme = isDark ? "dark" : "light";
 });
 
 // Toggle mobile menu
