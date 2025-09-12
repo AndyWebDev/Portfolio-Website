@@ -25,7 +25,35 @@ toggleBtn.addEventListener("click", () => {
   iconMoon.classList.toggle("hidden", !isDark);
 });
 
-// -------------------- Contact form modal --------------------
+// Toggle mobile menu
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+// Toggle menu on hamburger click
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevent immediate close
+  mobileMenu.classList.toggle("hidden");
+});
+
+// Close menu when a link/button is clicked
+mobileMenu.querySelectorAll("a, button").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (event) => {
+  const isClickInsideMenu = mobileMenu.contains(event.target);
+  const isClickOnToggle = menuToggle.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnToggle) {
+    mobileMenu.classList.add("hidden");
+  }
+});
+
+//-------------------- Contact form modal --------------------
 const formDiv = document.getElementById("form");
 const form = document.getElementById("booking-form");
 const successMsg = document.getElementById("success");

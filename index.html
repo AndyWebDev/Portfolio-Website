@@ -21,40 +21,54 @@
   <!-- Body -->
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <!-- NavBar -->
+
     <header class="bg-black">
       <div
-        class="w-full h-22 max-w-7xl mx-auto flex justify-between align-center gap-6 bg-black"
+        class="w-full max-w-7xl mx-auto flex justify-between items-center h-22 px-4"
       >
-        <div id="logo" class="max-h-20 aspect-square m-auto">
-          <img src="images\logo\logoDarkGrey.png" alt="BuiltByAndy logo" />
+        <!-- Logo -->
+        <div id="logo" class="max-h-20 aspect-square">
+          <img src="images/logo/logoDarkGrey.png" alt="BuiltByAndy logo" />
         </div>
-        <nav class="self-center m-auto">
-          <ul class="flex flex-cols justify-center align-center gap-3 m-auto">
-            <li class="w-28 text-center px-4 py-2 hover:scale-110">
+
+        <!-- Hamburger Icon for Small Devices -->
+        <div
+          class="md:hidden text-gray-100 text-2xl cursor-pointer"
+          id="menu-toggle"
+        >
+          <i
+            class="fas fa-home bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+          ></i>
+        </div>
+
+        <!-- Navigation for Medium+ Screens -->
+        <nav class="hidden md:flex flex-1 justify-center">
+          <ul class="flex gap-3 items-center">
+            <li class="w-28 text-center py-2 hover:scale-110">
               <a
                 href="#about"
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >About</a
               >
             </li>
-            <li class="w-28 text-center px-4 py-2 hover:scale-110">
+            <li class="w-28 text-center py-2 hover:scale-110">
               <a
                 href="#services"
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >Services</a
               >
             </li>
-            <li class="w-28 text-center px-4 py-2 hover:scale-110">
+            <li class="w-28 text-center py-2 hover:scale-110">
               <a
                 href="#portfolio"
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >Portfolio</a
               >
             </li>
-            <li class="w-28 text-center px-4 py-2 hover:scale-110">
+            <li class="w-28 text-center py-2 hover:scale-110">
               <button
                 id="contact-btn"
-                class="text-gray-100 px-5 py-3 rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110"
+                class="text-gray-100 w-full rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2"
               >
                 Contact
               </button>
@@ -62,7 +76,43 @@
           </ul>
         </nav>
       </div>
+
+      <!-- Collapsed Menu for Small Devices -->
+      <div class="md:hidden hidden bg-black" id="mobile-menu">
+        <ul class="flex flex-col gap-3 p-4">
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#about"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >About</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#services"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >Services</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#portfolio"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >Portfolio</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <button
+              id="contact-btn-mobile"
+              class="text-gray-100 w-full rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </div>
     </header>
+
     <!-- Hero section -->
     <section
       id="hero"
@@ -110,11 +160,11 @@
           class="relative mx-auto z-20 text-center text-white px-6 py-8 bg-white/20 rounded-xl border-white/20 border backdrop-blur-lg max-w-3xl"
         >
           <h1
-            class="text-5xl sm:text-5xl mb-5 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
+            class="text-3xl sm:text-5xl mb-5 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
           >
             Hi, I'm Andy!
           </h1>
-          <h2 class="text-2xl sm:text-3xl mt-2 font-semibold">
+          <h2 class="text-xl sm:text-3xl mt-2 font-semibold">
             Frontend Developer & Web Designer
           </h2>
           <p class="mt-4 mb-4 text-lg sm:text-xl">
@@ -614,23 +664,21 @@
         <!-- Centering div for 3 sections -->
         <div class="flex justify-center flex-wrap gap-3 mb-5">
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm min-h-[3rem]"
+            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-location-dot mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
             ></i>
-            <span class="text-center sm:text-left"
-              >Available for remote work</span
-            >
+            <span class="text-center sm:text-left">Working Remote</span>
           </p>
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm min-h-[3rem]"
+            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i class="fa-solid fa-clock mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"></i>
             <span class="text-center sm:text-left">Quick turnaround</span>
           </p>
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm min-h-[3rem]"
+            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-handshake mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
