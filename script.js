@@ -1,79 +1,82 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Get elements
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // ==== THEME TOGGLE ====
   const htmlEl = document.documentElement;
-  const toggleBtn = document.getElementById("toggleBtn");
+  const toggleBtn = document.getElementById("themeToggle");
   const iconSun = document.getElementById("iconSun");
   const iconMoon = document.getElementById("iconMoon");
 
-  // Force light mode on page load
-  htmlEl.classList.remove("dark");
-  iconSun?.classList.remove("hidden");
-  iconMoon?.classList.add("hidden");
+  // Set initial theme
+  if (localStorage.theme === "dark") {
+    htmlEl.classList.add("dark");
+    iconSun.classList.add("hidden");
+    iconMoon.classList.remove("hidden");
+  } else {
+    htmlEl.classList.remove("dark");
+    iconSun.classList.remove("hidden");
+    iconMoon.classList.add("hidden");
+  }
 
-  // Toggle dark/light mode on button click
-  toggleBtn?.addEventListener("click", () => {
-    const isDark = htmlEl.classList.toggle("dark"); // add/remove dark class
-    iconSun?.classList.toggle("hidden", isDark);
-    iconMoon?.classList.toggle("hidden", !isDark);
+  // Toggle on click
+  toggleBtn.addEventListener("click", () => {
+    const isDark = htmlEl.classList.toggle("dark");
+    localStorage.theme = isDark ? "dark" : "light";
+    iconSun.classList.toggle("hidden", isDark);
+    iconMoon.classList.toggle("hidden", !isDark);
   });
 
-  //-------------------- Toggle mobile menu --------------------
+  // ==== MOBILE MENU TOGGLE ====
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  menuToggle?.addEventListener("click", (e) => {
+  menuToggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    mobileMenu?.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
   });
 
-  // Close menu when a link/button is clicked
-  mobileMenu?.querySelectorAll("a, button").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu?.classList.add("hidden");
-    });
+  // Hide menu when clicking links
+  mobileMenu.querySelectorAll("a, button").forEach((link) => {
+    link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
   });
 
-  // Close menu when clicking outside
-  document.addEventListener("click", (event) => {
-    const isClickInsideMenu = mobileMenu?.contains(event.target);
-    const isClickOnToggle = menuToggle?.contains(event.target);
-
-    if (!isClickInsideMenu && !isClickOnToggle) {
-      mobileMenu?.classList.add("hidden");
+  // Hide menu on outside click
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
     }
   });
 
-  //-------------------- Contact form modal --------------------
+  // ==== CONTACT FORM MODAL ====
   const formDiv = document.getElementById("form");
   const form = document.getElementById("booking-form");
   const successMsg = document.getElementById("success");
   const closeBtn = document.getElementById("close-form");
 
   function openModal() {
-    formDiv?.classList.remove("hidden");
-    form?.classList.remove("hidden");
-    form?.reset();
-    successMsg?.classList.add("hidden");
+    formDiv.classList.remove("hidden");
+    form.classList.remove("hidden");
+    form.reset();
+    successMsg.classList.add("hidden");
     form
-      ?.querySelectorAll("p.text-red-600")
+      .querySelectorAll("p.text-red-600")
       .forEach((el) => el.classList.add("hidden"));
   }
 
+  // Buttons that open the form
   document
-    .querySelectorAll("#hero-btn, #cta-btn, #contact-btn")
-    .forEach((btn) => {
-      btn.addEventListener("click", openModal);
-    });
+    .querySelectorAll("#hero-btn, #cta-btn, #contact-btn, #contact-btn-mobile")
+    .forEach((btn) => btn.addEventListener("click", openModal));
 
-  closeBtn?.addEventListener("click", () => formDiv?.classList.add("hidden"));
+  closeBtn.addEventListener("click", () => formDiv.classList.add("hidden"));
+
+  // Close modal on Escape
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") formDiv?.classList.add("hidden");
+    if (e.key === "Escape") formDiv.classList.add("hidden");
   });
 
-  form?.addEventListener("submit", (e) => {
+  // ==== FORM SUBMISSION & VALIDATION ====
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!form) return;
-
     const formData = {
       name: form.name.value.trim(),
       email: form.email.value.trim(),
@@ -89,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!formData.phone) errors.phone = "Telephone is required.";
     if (!formData.service) errors.service = "Please select a service.";
 
-    // Clear previous errors
     form.querySelectorAll("p.text-red-600").forEach((el) => {
       el.textContent = "";
       el.classList.add("hidden");
@@ -99,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Object.entries(errors).forEach(([field, msg]) => {
         if (!msg) return;
         const input = form.querySelector(`[name="${field}"]`);
-        const errorEl = input?.parentElement.querySelector("p.text-red-600");
+        const errorEl = input.parentElement.querySelector("p.text-red-600");
         if (errorEl) {
           errorEl.textContent = msg;
           errorEl.classList.remove("hidden");
@@ -109,23 +111,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     form.classList.add("hidden");
-    successMsg?.classList.remove("hidden");
+    successMsg.classList.remove("hidden");
   });
 
-  //-------------------- Dynamic year --------------------
+  // ==== CURRENT YEAR ====
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  //-------------------- Cookie banner --------------------
+  // ==== COOKIE BANNER ====
   const overlay = document.getElementById("cookie-overlay");
   const acceptBtn = document.getElementById("accept-cookies");
 
-  if (overlay && localStorage.getItem("cookiesAccepted") !== "true") {
+  if (localStorage.getItem("cookiesAccepted") !== "true") {
     overlay.classList.remove("hidden");
   }
 
-  acceptBtn?.addEventListener("click", () => {
+  acceptBtn.addEventListener("click", () => {
     localStorage.setItem("cookiesAccepted", "true");
-    overlay?.classList.add("hidden");
+    overlay.classList.add("hidden");
   });
 });
