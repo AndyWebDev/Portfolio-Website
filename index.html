@@ -24,25 +24,15 @@
 
     <header class="bg-black">
       <div
-        class="w-full max-w-7xl mx-auto flex justify-between items-center h-22 px-4"
+        class="max-w-7xl mx-auto flex justify-between items-center h-22 px-4"
       >
-        <!-- Logo -->
+        <!-- Logo on the left -->
         <div id="logo" class="max-h-20 aspect-square">
           <img src="images/logo/logoDarkGrey.png" alt="BuiltByAndy logo" />
         </div>
 
-        <!-- Hamburger Icon for Small Devices -->
-        <div
-          class="md:hidden text-gray-100 text-2xl cursor-pointer"
-          id="menu-toggle"
-        >
-          <i
-            class="fas fa-home bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
-          ></i>
-        </div>
-
-        <!-- Navigation for Medium+ Screens -->
-        <nav class="hidden md:flex flex-1 justify-center">
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-4">
           <ul class="flex gap-3 items-center">
             <li class="w-28 text-center py-2 hover:scale-110">
               <a
@@ -68,16 +58,26 @@
             <li class="w-28 text-center py-2 hover:scale-110">
               <button
                 id="contact-btn"
-                class="text-gray-100 w-full rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2"
+                class="text-gray-100 rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2 px-4"
               >
                 Contact
               </button>
             </li>
           </ul>
         </nav>
+
+        <!-- Hamburger for Mobile -->
+        <div
+          class="md:hidden text-gray-100 text-2xl cursor-pointer"
+          id="menu-toggle"
+        >
+          <i
+            class="fas fa-home bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+          ></i>
+        </div>
       </div>
 
-      <!-- Collapsed Menu for Small Devices -->
+      <!-- Mobile Menu -->
       <div class="md:hidden hidden bg-black" id="mobile-menu">
         <ul class="flex flex-col gap-3 p-4">
           <li class="text-center py-2 hover:scale-110">
@@ -104,7 +104,7 @@
           <li class="text-center py-2 hover:scale-110">
             <button
               id="contact-btn-mobile"
-              class="text-gray-100 w-full rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2"
+              class="text-gray-100 w-full rounded bg-gradient-to-l from-cyan-500 to-purple-600 font-semibold text-xl hover:scale-110 py-2 px-4"
             >
               Contact
             </button>
@@ -664,7 +664,7 @@
         <!-- Centering div for 3 sections -->
         <div class="flex justify-center flex-wrap gap-3 mb-5">
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-location-dot mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
@@ -672,13 +672,13 @@
             <span class="text-center sm:text-left">Working Remote</span>
           </p>
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i class="fa-solid fa-clock mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"></i>
             <span class="text-center sm:text-left">Quick turnaround</span>
           </p>
           <p
-            class="flex flex-col sm:flex-row items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-handshake mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
@@ -1045,8 +1045,10 @@
         <p
           class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 flex justify-center items-center gap-2 md:gap-4"
         >
-          © Copyright<span id="year"></span> All Rights Reserved by BuiltByAndy
+          © Copyright<span id="year"></span> 
+          <p class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50" >All Rights Reserved by BuiltByAndy</p>
 
+<p class="text-center">
           <a
             href="Privacy-policy.html"
             target="_blank"
@@ -1054,6 +1056,7 @@
           >
             Privacy Policy
           </a>
+          </p>
         </p>
         <p
           class="text-lg mt-3 text-center text-gray-50 flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4"
