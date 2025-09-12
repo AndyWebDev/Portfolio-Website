@@ -4,12 +4,17 @@ const toggleBtn = document.getElementById("themeToggle");
 const iconSun = document.getElementById("iconSun");
 const iconMoon = document.getElementById("iconMoon");
 
-// Always start light, ignore existing theme
+const htmlEl = document.documentElement;
+const toggleBtn = document.getElementById("toggleBtn");
+const iconSun = document.getElementById("iconSun");
+const iconMoon = document.getElementById("iconMoon");
+
+// Start page in light mode regardless of system preference
 htmlEl.classList.remove("dark");
 iconSun.classList.remove("hidden");
 iconMoon.classList.add("hidden");
 
-// Toggle dark/light mode on button click
+// Toggle dark/light mode
 toggleBtn.addEventListener("click", () => {
   const isDark = htmlEl.classList.toggle("dark");
 
@@ -17,8 +22,7 @@ toggleBtn.addEventListener("click", () => {
   iconSun.classList.toggle("hidden", isDark);
   iconMoon.classList.toggle("hidden", !isDark);
 
-  // Save choice only for this page/session
-  // Optionally, you can skip saving to localStorage if you want it to reset next visit
+  // Save preference for this page (optional)
   // localStorage.theme = isDark ? "dark" : "light";
 });
 
