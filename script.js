@@ -1,47 +1,49 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //-------------------- DARK / LIGHT TOGGLE --------------------
+  // Get elements
   const htmlEl = document.documentElement;
   const toggleBtn = document.getElementById("toggleBtn");
   const iconSun = document.getElementById("iconSun");
   const iconMoon = document.getElementById("iconMoon");
 
-  // Initialize light mode
+  // Force light mode on page load
   htmlEl.classList.remove("dark");
   iconSun?.classList.remove("hidden");
   iconMoon?.classList.add("hidden");
 
+  // Toggle dark/light mode on button click
   toggleBtn?.addEventListener("click", () => {
-    const isDark = htmlEl.classList.toggle("dark");
+    const isDark = htmlEl.classList.toggle("dark"); // add/remove dark class
     iconSun?.classList.toggle("hidden", isDark);
     iconMoon?.classList.toggle("hidden", !isDark);
   });
 
-  //-------------------- MOBILE MENU --------------------
+  //-------------------- Toggle mobile menu --------------------
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  function toggleMenu() {
+  menuToggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
     mobileMenu?.classList.toggle("hidden");
-  }
+  });
 
-  menuToggle?.addEventListener("click", toggleMenu);
+  // Close menu when a link/button is clicked
+  mobileMenu?.querySelectorAll("a, button").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
 
   // Close menu when clicking outside
   document.addEventListener("click", (event) => {
-    if (
-      !mobileMenu?.contains(event.target) &&
-      !menuToggle?.contains(event.target)
-    ) {
+    const isClickInsideMenu = mobileMenu?.contains(event.target);
+    const isClickOnToggle = menuToggle?.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnToggle) {
       mobileMenu?.classList.add("hidden");
     }
   });
 
-  // Close menu when a link/button inside menu is clicked
-  mobileMenu?.querySelectorAll("a, button").forEach((link) => {
-    link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-  });
-
-  //-------------------- CONTACT FORM MODAL --------------------
+  //-------------------- Contact form modal --------------------
   const formDiv = document.getElementById("form");
   const form = document.getElementById("booking-form");
   const successMsg = document.getElementById("success");
@@ -93,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("hidden");
     });
 
-    // Display errors
     if (Object.keys(errors).length) {
       Object.entries(errors).forEach(([field, msg]) => {
         if (!msg) return;
@@ -107,12 +108,15 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Success
     form.classList.add("hidden");
     successMsg?.classList.remove("hidden");
   });
 
-  //-------------------- COOKIE BANNER --------------------
+  //-------------------- Dynamic year --------------------
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  //-------------------- Cookie banner --------------------
   const overlay = document.getElementById("cookie-overlay");
   const acceptBtn = document.getElementById("accept-cookies");
 
@@ -124,8 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cookiesAccepted", "true");
     overlay?.classList.add("hidden");
   });
-
-  //-------------------- DYNAMIC YEAR --------------------
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
 });
