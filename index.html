@@ -4,7 +4,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BuiltByAndy</title>
+    <title>
+      BuiltByAndy - Frontend Developer & Web designer - Website Creator
+    </title>
+    <meta
+      name="description"
+      content="BuiltByAndy: Frontend developer and web designer creating responsive, fast and user-centric websites. Working directly with business owners as well as web designers to bring their ideas to life with clean code."
+    />
+
+    <!-- Open Graph / Social Cards -->
+    <meta
+      property="og:title"
+      content="BuiltByAndy – Frontend Developer & Web Designer"
+    />
+    <meta
+      property="og:description"
+      content="Responsive, performant websites that are user friendly, well designed and cleanly coded."
+    />
+    <meta
+      property="og:image"
+      content="images/BuiltByAndy - website picture.png"
+    />
+    <meta property="og:url" content="https://builtbyandy.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://builtbyandy.com/" />
+
     <link rel="stylesheet" href="styles.css" />
     <!-- AOS Animation-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -29,11 +55,16 @@
       >
         <!-- Logo on the left -->
         <div id="logo" class="max-h-20 aspect-square">
-          <img src="images/logo/logoDarkGrey.png" alt="BuiltByAndy logo" />
+          <a href="#home"
+            ><img src="images/logo/logoDarkGrey.png" alt="BuiltByAndy Logo"
+          /></a>
         </div>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-4">
+        <nav
+          class="hidden md:flex items-center gap-4"
+          aria-label="Main navigation"
+        >
           <ul class="flex gap-3 items-center">
             <li class="w-28 text-center py-2 hover:scale-110">
               <a
@@ -79,7 +110,11 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div class="md:hidden hidden bg-black" id="mobile-menu">
+      <div
+        class="md:hidden hidden bg-black"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+      >
         <ul class="flex flex-col gap-3 p-4">
           <li class="text-center py-2 hover:scale-110">
             <a
@@ -116,14 +151,14 @@
 
     <!-- Hero section -->
     <section
-      id="hero"
+      id="home"
       class="relative w-full h-full flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
     >
       <!-- Background image -->
       <img
         class="absolute inset-0 w-full h-full object-cover"
         src="images/developer-8829735_1920.jpg"
-        alt="developer background"
+        alt="Built by Andy website background - computer on the desk with VS Code open, showing code"
       />
 
       <!-- Bubble container -->
@@ -170,7 +205,7 @@
             Hi, I'm Andy!
           </h1>
           <h2 class="text-xl sm:text-3xl mt-2 font-semibold">
-            Frontend Developer & Web Designer
+            I am a Frontend Developer & Web Designer
           </h2>
           <p class="mt-4 mb-4 text-lg sm:text-xl">
             I specialize in building responsive, performant, and user-centric
@@ -274,7 +309,10 @@
               d="M19 9l-7 7-7-7"
             />
           </svg>
-          <a href="#about" class="font-semibold transition duration-300 ease-in"
+          <a
+            href="#about"
+            class="font-semibold transition duration-300 ease-in"
+            aria-label="Go to next Website Section - About me"
             >Explore more</a
           >
         </div>
@@ -287,18 +325,18 @@
         <button
           id="themeToggle"
           class="text-2xl p-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 shadow-lg transition-all duration-300 hover:scale-110"
+          aria-label="Toggle website theme from dark to light or vice-versa"
         >
           <i id="iconSun" class="fa-solid fa-sun text-yellow-400"></i>
           <i id="iconMoon" class="fa-solid fa-moon hidden"></i>
         </button>
       </div>
       <!-- Section start -->
-      <h1 class="text-3xl font-bold">About Me</h1>
+      <h2 class="text-3xl font-bold">About Me</h2>
       <p class="text-xl font-semibold mt-5">
-        I'm a passionate Frontend Developer who loves to elevate the digital
-        experience of small and medium businesses. By combining modern web
-        technologies with thoughtful design, I bring brands to life online in a
-        way that is both engaging and functional.
+        I'm a passionate Frontend Developer who loves combining modern web
+        technologies with thoughtful design, and brings brands to life online in
+        a way that is both engaging and functional.
       </p>
       <!-- 2 col grid with text/image -->
       <div
@@ -306,7 +344,7 @@
       >
         <!-- text column -->
         <div>
-          <h2 class="text-xl font-semibold mt-5 mb-5">My Journey</h2>
+          <h3 class="text-xl font-semibold mt-5 mb-5">My Journey</h3>
           <p class="text-left mt-2 text-md">
             My journey into frontend development started with curiosity about
             how websites work. After 13+ years in IT, helping organizations
@@ -324,11 +362,6 @@
             website builders or coding from scratch, I focus on simplicity and
             performance — no unnecessary “fluff”.
           </p>
-          <p class="text-left mt-2">
-            When I’m not coding, I enjoy exploring new technologies or spending
-            time outdoors in the Scottish countryside (motorcycling, kayaking,
-            hillwalking, and camping).
-          </p>
         </div>
         <!-- Cards columns -->
         <div class="grid mt-12 mb-5 gap-3 sm:grid-cols-1 md:grid-cols-2">
@@ -342,16 +375,17 @@
                 class="fa-solid fa-code m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
               ></i>
             </span>
-            <p class="text-slate-800 text-center text-md font-semibold">
+            <h4 class="text-slate-800 text-center text-md font-semibold">
               Clean Code
-            </p>
+            </h4>
             <p class="text-slate-800 text-center text-sm p-1">
-              Writing maintainable, scalable and well-documented code.
+              Modern, scalable, and easy-to-maintain frontend code using best
+              practices.
             </p>
           </div>
 
           <div
-            id="card1"
+            id="card2"
             class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
           >
             <span>
@@ -359,15 +393,15 @@
                 class="fa-solid fa-truck-fast text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
               ></i>
             </span>
-            <p class="text-slate-800 text-center text-md font-semibold">
+            <h4 class="text-slate-800 text-center text-md font-semibold">
               Performance
-            </p>
+            </h4>
             <p class="text-slate-800 text-center text-sm p-1">
-              Optimized websites for fast loading and resource efficiency.
+              Fast-loading, SEO-friendly websites to keep visitors engaged.
             </p>
           </div>
           <div
-            id="card2"
+            id="card3"
             class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
           >
             <span>
@@ -375,15 +409,15 @@
                 class="fa-solid fa-lightbulb m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
               ></i>
             </span>
-            <p class="text-slate-900 text-center text-md font-semibold">
-              Creative solutions
-            </p>
+            <h4 class="text-slate-900 text-center text-md font-semibold">
+              Responsive Design
+            </h4>
             <p class="text-slate-800 text-center text-sm p-1">
-              Innovative approaches to complex web challenges.
+              Layouts that look great on every device and screen size.
             </p>
           </div>
           <div
-            id="card1"
+            id="card4"
             class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
           >
             <span>
@@ -391,9 +425,9 @@
                 class="fa-solid fa-user-plus text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
               ></i>
             </span>
-            <p class="text-slate-900 text-center text-md font-semibold">
+            <h4 class="text-slate-900 text-center text-md font-semibold">
               User-Centered
-            </p>
+            </h4>
             <p class="text-slate-800 text-center text-sm p-1">
               Creating websites with accessibility and user experience in mind.
             </p>
@@ -404,17 +438,17 @@
 
     <!-- Services section -->
     <section id="services" class="max-w-7xl mx-auto p-10 space-y-8">
-      <h1 class="text-3xl font-bold text-center mb-8">My Services</h1>
+      <h2 class="text-3xl font-bold text-center mb-8">My Services</h2>
 
       <!-- 2-column grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- Left Column: Skills -->
         <div class="flex flex-col justify-center space-y-8">
-          <h2
+          <h3
             class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
           >
             Technologies I Use Today
-          </h2>
+          </h3>
 
           <div class="space-y-4">
             <!-- HTML -->
@@ -538,30 +572,11 @@
             </div>
           </div>
 
-          <!-- Parallax (loading) -->
+          <!-- Wix -->
           <div>
             <div class="flex justify-between mb-1">
               <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Parallax</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Currently loading...</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-              ></div>
-            </div>
-          </div>
-
-          <!-- WordPress/Wix -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >WordPress / Wix</span
+                >Wix</span
               >
               <span class="font-semibold text-gray-800 dark:text-gray-100"
                 >96%</span
@@ -572,7 +587,28 @@
             >
               <div
                 class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                data-width="97%"
+                data-width="96%"
+                style="width: 0; transition: width 1.5s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- WordPress -->
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >WordPress</span
+              >
+              <span class="font-semibold text-gray-800 dark:text-gray-100"
+                >96%</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
+            >
+              <div
+                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
+                data-width="96%"
                 style="width: 0; transition: width 1.5s ease-out"
               ></div>
             </div>
@@ -581,20 +617,22 @@
       </div>
 
       <div class="flex flex-col justify-center space-y-6">
-        <h2
+        <h3
           class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
         >
           Services You Can Consume
-        </h2>
+        </h3>
 
         <div class="flex flex-col gap-4 w-full">
           <!-- Standard Template Website -->
           <div
             class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
           >
-            <span class="font-semibold mb-2 text-center dark:text-gray-300">
-              Standard Template Website (WordPress, Wix, etc.)
-            </span>
+            <h4>
+              <span class="font-semibold mb-2 text-center dark:text-gray-300">
+                Standard Template Website (WordPress, Wix, etc.)
+              </span>
+            </h4>
             <p
               class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
@@ -608,9 +646,11 @@
           <div
             class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
           >
-            <span class="font-semibold mb-2 text-center dark:text-gray-300">
-              Custom Website (5+ pages, coded)
-            </span>
+            <h4>
+              <span class="font-semibold mb-2 text-center dark:text-gray-300">
+                Custom Website (5+ pages, coded)
+              </span>
+            </h4>
             <p
               class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
@@ -624,9 +664,11 @@
           <div
             class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
           >
-            <span class="font-semibold mb-2 text-center dark:text-gray-300"
-              >Hosting Services</span
-            >
+            <h4>
+              <span class="font-semibold mb-2 text-center dark:text-gray-300"
+                >Hosting Services</span
+              >
+            </h4>
             <p
               class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
@@ -639,9 +681,11 @@
           <div
             class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
           >
-            <span class="font-semibold mb-2 text-center dark:text-gray-300"
-              >Ongoing Website Updates & Changes</span
-            >
+            <h4>
+              <span class="font-semibold mb-2 text-center dark:text-gray-300"
+                >Ongoing Website Updates & Changes</span
+              >
+            </h4>
             <p
               class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
             >
@@ -658,11 +702,11 @@
       <div
         class="bg-gradient-to-l py-10 from-cyan-500 to-purple-500 rounded text-grey-50 text-center max-w-7xl m-10 p-10 mx-auto text-center flex flex-col justify-center items-center"
       >
-        <h1
+        <h2
           class="text-3xl sm:text-5xl font-bold text-gray-50 mt-5 drop-shadow-lg"
         >
           Let's build something amazing!
-        </h1>
+        </h2>
         <p class="text-lg font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
           I'm always excited to work on new projects or collaborate with
           creators. Whether you have a clear vision or just an idea, let's
@@ -708,7 +752,7 @@
       id="portfolio"
       class="max-w-7xl mx-auto p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
     >
-      <h1 class="text-3xl font-bold text-center mb-10">My Latest Work</h1>
+      <h2 class="text-3xl font-bold text-center mb-10">My Latest Work</h2>
 
       <!-- Cards grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -723,12 +767,16 @@
           >
             <img
               src="images\exectravel.png"
-              alt="Executive Travel Website preview"
+              alt="Screenshot of Executive Travel website project"
               class="w-full h-48 object-cover"
+              loading="lazy"
             />
           </a>
           <div class="p-5">
-            <h2 class="text-xl font-semibold mb-2">Executive Travel Website</h2>
+            <h3 class="text-xl font-semibold mb-2">Executive Travel Website</h3>
+            <p class="mb-4">
+              A sleek, modern site for a premium travel service.
+            </p>
             <p class="text-sm mb-4">
               Custom HTML/CSS/JS/Tailwind build. Hosting and management
               included.
@@ -736,8 +784,9 @@
             <a
               href="https://chrystalexecutivetravel.co.uk/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              aria-label="View the Executive Travel Website project by BuiltByAndy"
             >
               Visit Site
             </a>
@@ -751,18 +800,22 @@
           <a
             href="https://smileplanneruk-turkey.com/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <img
               src="images\smileplanner.png"
               alt="Cosmetic Dentistry Website preview"
               class="w-full h-48 object-cover"
+              loading="lazy"
             />
           </a>
           <div class="p-5">
-            <h2 class="text-xl font-semibold mb-2">
+            <h3 class="text-xl font-semibold mb-2">
               Cosmetic Dentistry Website
-            </h2>
+            </h3>
+            <p class="mb-4">
+              A clean, modern site for a dental agency service.
+            </p>
             <p class="text-sm mb-4">
               Designed and developed with HTML, CSS, JavaScript and Tailwind.
             </p>
@@ -771,6 +824,7 @@
               target="_blank"
               rel="noopener"
               class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              aria-label="View the Dental Agency Website project by BuiltByAndy"
             >
               Visit Site
             </a>
@@ -787,20 +841,26 @@
           >
             <img
               src="images\calculator.png"
-              alt="Styled Calculator preview"
+              alt="Preview of Styled Calculator application"
               class="w-full h-48 object-cover"
+              loading="lazy"
             />
           </a>
           <div class="p-5">
-            <h2 class="text-xl font-semibold mb-2">Styled Calculator</h2>
+            <h3 class="text-xl font-semibold mb-2">Styled Calculator</h3>
+            <p class="mb-4">
+              An interactive calculator with custom styling and smooth
+              animations.
+            </p>
             <p class="text-sm mb-4">
               Application created with HTML, CSS and JavaScript.
             </p>
             <a
               href="https://styled-calculator.netlify.app/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              aria-label="View the Styled Calculator App project by BuiltByAndy"
             >
               View App
             </a>
@@ -871,6 +931,7 @@
               type="email"
               name="email"
               class="mt-1 block w-full text-gray-900 rounded p-2 border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
             />
             <p class="text-red-600 text-sm hidden"></p>
           </div>
@@ -884,6 +945,7 @@
               type="tel"
               name="phone"
               class="mt-1 block w-full rounded text-gray-900 p-2 border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
             />
             <p class="text-red-600 text-sm hidden"></p>
           </div>
@@ -896,6 +958,7 @@
             <select
               name="service"
               class="mt-1 block w-full rounded text-gray-900 p-2 border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              required
             >
               <option value="">-- Select a Service --</option>
               <option value="Standard template Website">
@@ -929,6 +992,7 @@
                 href="Privacy-policy.html"
                 target="_blank"
                 class="text-blue-600 underline"
+                aria-label="See the detailed Privacy Policy for BuiltByAndy"
                 >Privacy Policy</a
               >
               and consent to my data being stored.
@@ -958,9 +1022,9 @@
         >
           <!-- Company Links -->
           <div>
-            <p class="font-semibold tracking-widest uppercase text-center">
+            <h2 class="font-semibold tracking-widest uppercase text-center">
               Company
-            </p>
+            </h2>
             <ul class="mt-6 flex flex-wrap justify-center gap-6">
               <li>
                 <a
@@ -1009,9 +1073,9 @@
           <div
             class="flex flex-col items-center justify-between bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
           >
-            <h1 class="font-semibold tracking-widest uppercase text-center">
+            <h2 class="font-semibold tracking-widest uppercase text-center">
               Connect with us / Follow us
-            </h1>
+            </h2>
             <div
               class="flex justify-center items-center text-4xl space-x-8 mt-6"
             >
@@ -1059,7 +1123,7 @@
         <p
           class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
         >
-          All Rights Reserved by BuiltByAndy
+          All Rights Reserved by <a href="#home">BuiltByAndy</a>
         </p>
 
         <p class="text-center">
@@ -1067,6 +1131,7 @@
             href="Privacy-policy.html"
             target="_blank"
             class="underline hover:text-blue-600 text-sm mt-1 md:mt-0"
+            aria-label="See the detailed Privacy Policy terms and conditions"
           >
             Privacy Policy
           </a>
@@ -1110,5 +1175,15 @@
   <script src="script.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Andy",
+      "jobTitle": "Frontend Developer & Web Designer",
+      "url": "https://builtbyandy.com",
+      "sameAs": ["https://github.com/AndyWebDev"]
+    }
   </script>
 </html>
