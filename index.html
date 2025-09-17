@@ -1,19 +1,21 @@
 <!-- v2 release -->
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
+  
+   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      BuiltByAndy - Frontend Developer & Web designer - Website Developer
+      BuiltByAndy - Frontend Developer & Web designer - Website Creator
     </title>
     <meta
       name="description"
-      content="BuiltByAndy: Frontend developer and web designer creating responsive, fast and user-centric websites. Working with business owners or web designers to bring their ideas to life with clean code."
+      content="BuiltByAndy: Frontend developer and web designer creating responsive, fast and user-centric websites. Working directly with business owners as well as web designers to bring their ideas to life with clean code."
     />
-    <meta
+<meta
       name="keywords"
-      content="web developer Scotland, web developer UK, web developer Stirling, web developer Edinburgh, web designer Stirling, web developer Alloa, web designer Alloa, web designed Edinburgh, web designer Scotland, UK web development, custom website design Scotland, responsive web design UK, ecommerce developer Scotland, WordPress developer Scotland, freelance web designer UK, web design agency Scotland, front end developer Scotland, small business websites UK, website maintenance Scotland, SEO friendly web design UK, affordable web development Scotland"
+      content="web developer Scotland, web developer UK, web developer Stirling, web developer Edinburgh, web designer Stirling, web developer Alloa, web designer Alloa, web designed Edinburgh, web designer Scotland, UK web development, website design Scotland, website developer Alloa, responsive web design UK, ecommerce developer Scotland, WordPress developer Scotland, freelance web designer UK, web design agency Scotland, front end developer Scotland, small business websites UK, website developer Scotland, SEO friendly web design UK, website development Stirling"
     />
     <!-- Open Graph / Social Cards -->
     <meta
@@ -35,16 +37,28 @@
     <link rel="stylesheet" href="styles.css" />
     <!-- AOS Animation-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- TailwindCSS theme -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: "class" };
-    </script>
-    <!-- FontAwesome -->
+
+     <!-- FontAwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <!-- TailwindCSS theme -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        fontFamily: {
+          header: ["Merriweather Sans", "sans-serif"], // Custom font class for headers
+        },
+      },
+    },
+  };
+</script>
+   
 
     <link
       rel="icon"
@@ -54,47 +68,37 @@
     />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      href="images/android-chrome-192x192.png"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      rel="icon"
-      href="images/android-chrome-512x512.png"
-      sizes="512x512"
-      type="image/png"
-    />
+   
+<!-- Google Font: Merriweather Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   </head>
+
   <!-- Body -->
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <!-- NavBar -->
 
     <header class="bg-black">
       <div
         class="max-w-7xl mx-auto flex justify-between items-center h-22 px-4"
       >
-        <!-- Logo on the left -->
-        <div id="logo" class="max-h-20 aspect-square">
-          <a href="#home"
-            ><img src="images/logo/logoDarkGrey.png" alt="BuiltByAndy Logo"
-          /></a>
-        </div>
+       <!-- Logo on the left -->
+<div id="logo" class="max-h-10 w-auto py-1">
+  <a href="#home">
+    <img src="images/logoDarkGrey_medium.png" 
+         alt="BuiltByAndy Logo" 
+         class="h-8 w-auto object-contain">
+  </a>
+</div>
 
         <!-- Desktop Navigation -->
         <nav
           class="hidden md:flex items-center gap-4"
           aria-label="Main navigation"
         >
-          <ul class="flex gap-3 items-center">
-            <li class="w-28 text-center py-2 hover:scale-110">
-              <a
-                href="#about"
-                class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
-                >About</a
-              >
-            </li>
+          <ul class="grid grid-cols-5 gap-3 items-center">
+           
+            
             <li class="w-28 text-center py-2 hover:scale-110">
               <a
                 href="#services"
@@ -108,7 +112,22 @@
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >Portfolio</a
               >
+              </li>
+              <li class="w-28 text-center py-2 hover:scale-110">
+                <a
+                href="#faq"
+                class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+                >FAQ</a
+              >
             </li>
+            <li class="w-28 text-center py-2 hover:scale-110">
+                <a
+                href="#about"
+                class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+                >About</a
+              >
+            </li>
+           
             <li class="w-28 text-center py-2 hover:scale-110">
               <button
                 id="contact-btn"
@@ -124,7 +143,7 @@
         <div
           class="md:hidden text-gray-100 text-2xl cursor-pointer"
           id="menu-toggle"
-        >
+        aria-label="Menu-icon - home">
           <i
             class="fas fa-home bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
           ></i>
@@ -138,13 +157,7 @@
         aria-label="Mobile navigation"
       >
         <ul class="flex flex-col gap-3 p-4">
-          <li class="text-center py-2 hover:scale-110">
-            <a
-              href="#about"
-              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
-              >About</a
-            >
-          </li>
+          
           <li class="text-center py-2 hover:scale-110">
             <a
               href="#services"
@@ -157,6 +170,20 @@
               href="#portfolio"
               class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
               >Portfolio</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#faq"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >FAQs</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#about"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >About</a
             >
           </li>
           <li class="text-center py-2 hover:scale-110">
@@ -216,24 +243,20 @@
       </div>
 
       <!-- Overlay for text & tech -->
-      <div class="bg-black/20 backdrop-blur-xs w-full relative z-10 p-10">
-        <div
+      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs w-full relative z-10 p-10">
+        <div 
           id="hero-text"
           class="relative mx-auto z-20 text-center text-white px-6 py-8 bg-white/20 rounded-xl border-white/20 border backdrop-blur-lg max-w-3xl"
         >
-          <h1
-            class="text-3xl sm:text-5xl mb-5 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
+          <h1 
+            class="font-header text-4xl sm:text-7xl py-2 mb-4 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
           >
-            Hi, I'm Andy!
+            Websites crafted for your growth
           </h1>
-          <h2 class="text-xl sm:text-3xl mt-2 font-semibold">
-            I am a Frontend Developer & Web Designer
+          <h2 class="text-xl sm:text-3xl mt-4 font-semibold">
+            Responsive, performant, and user-centric websites that put your
+            business at the center. 
           </h2>
-          <p class="mt-4 mb-4 text-lg sm:text-xl">
-            I specialize in building responsive, performant, and user-centric
-            websites that put your business at the center. I craft digital
-            experiences using modern web technologies.
-          </p>
           <div class="mt-4 flex flex-wrap justify-center gap-3">
             <span
               class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
@@ -255,23 +278,25 @@
               class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
               >React</span
             >
+            <span
+              class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
+              >Webflow</span
+            >
           </div>
         </div>
 
         <!-- Buttons outside the overlay -->
         <div class="mt-6 flex gap-4 z-20 relative justify-center align-center">
           <!-- Full gradient button -->
-          <button
-            class="rounded bg-gradient-to-l from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300"
-          >
-            <a href="#portfolio">View my work</a>
-          </button>
+         
+            <a href="#portfolio" aria-label="Click here to see my portfolio" class="rounded bg-gradient-to-l from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300" >View my work</a>
+          
 
           <!-- Transparent gradient-border button -->
           <button
             id="hero-btn"
             class="relative px-4 py-2 font-bold rounded-xl text-white bg-transparent border-2 border-transparent hover:scale-110 transition-transform duration-300 gradient-border"
-          >
+          aria-label="Click here to get in touch">
             Get in Touch
           </button>
         </div>
@@ -332,18 +357,23 @@
             />
           </svg>
           <a
-            href="#about"
+            href="#new-services"
             class="font-semibold transition duration-300 ease-in"
             aria-label="Go to next Website Section - About me"
             >Explore more</a
           >
         </div>
       </div>
-    </section>
-    <!-- About Me section -->
-    <section id="about" class="max-w-7xl p-10 text-center mx-auto bg-black\20">
-      <!-- Theme Toggle button -->
-      <div class="flex justify-end p-4">
+</section>
+<!-- Services section -->
+
+
+<section id="new-services" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl mx-auto p-6 bg-gray-50 dark:bg-gray-900 dark:text-gray-50">
+  <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+    Web development focused on your business needs
+  </h2>
+  <!-- Theme Toggle button -->
+      <div class="flex justify-end p-2">
         <button
           id="themeToggle"
           class="text-2xl p-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 shadow-lg transition-all duration-300 hover:scale-110"
@@ -353,374 +383,115 @@
           <i id="iconMoon" class="fa-solid fa-moon hidden"></i>
         </button>
       </div>
-      <!-- Section start -->
-      <h2 class="text-3xl font-bold">About Me</h2>
-      <p class="text-xl font-semibold mt-5">
-        I'm a passionate Frontend Developer who loves combining modern web
-        technologies with thoughtful design, and brings brands to life online in
-        a way that is both engaging and functional.
+  <!-- Grid container -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    
+    <!-- 1️⃣ First card (2x width) -->
+    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300" class="hover:shadow-lg col-span-1 md:col-span-2 bg-white dark:bg-gray-600 rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+      <!-- text column -->
+      <div class="w-1/2 min-w-[200px] p-6 flex flex-col justify-center">
+          <span><i class="fa-regular fa-address-card text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Template site packages</h3>
+          <p>
+            Kickstart your online presence with stylish, ready-to-go templates.
+            Fast, affordable, and tailored for your goals.
+          </p>
+          <p class="mt-2 text-sm">
+            Up to 5 pages or sections, fully functional using pre-built templates. Ideal for small businesses who want a fast, reliable website.
+          </p>
+      </div>
+
+      <!-- image column -->
+      <div class="w-1/2 min-w-[200px] min-h-86 overflow-hidden">
+        <img src="images/website-template.jpg" 
+             alt="Template site packages" 
+             class="w-full h-full object-cover rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none">
+
+            </div>
+    </div>
+
+    <!-- 2️⃣ Second card (1x width) -->
+    <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+      <img src="images/coding-support.jpg" alt="Ongoing care" class="w-full h-56 object-cover rounded-xl mb-4">
+       <span><i class="fa-regular fa-thumbs-up text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+      <h3 class="font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+        Ongoing care &amp; support
+      </h3>
+      <p>
+        Relax knowing your site is managed, updated, and ready for what’s next - help is just a message away.
       </p>
-      <!-- 2 col grid with text/image -->
-      <div
-        class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center"
-      >
-        <!-- text column -->
-        <div>
-          <h3 class="text-xl font-semibold mt-5 mb-5">My Journey</h3>
-          <p class="text-left mt-2 text-md">
-            My journey into frontend development started with curiosity about
-            how websites work. After 13+ years in IT, helping organizations
-            optimize datacenters and operations, I realized I wanted to
-            understand how technology is experienced by end users.
+      <p class="mt-2 text-sm">
+        Reliable hosting setup and management to keep your website fast, secure, and online 24/7.
+      </p>
+    </div>
+
+    <!-- 3️⃣ Middle single card: image above text -->
+    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+      <img src="images/seo post.jpg" alt="SEO that works" class="w-full h-56 object-cover rounded-xl mb-4">
+       <span><i class="fa-regular fa-file-lines text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+      <h3 class=" font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+       Ongoing Website Updates & Changes
+      </h3>
+      <p>
+        Continuosly improve your brand and online visibility by adding new features and content that connect you with your ideal audience.
+      </p>
+      <p class="mt-2 text-sm">
+        Regular updates, bug fixes, and feature additions for websites we created.
+      </p>
+    </div>
+
+    <!-- 4️⃣ Last double card: text left, image right -->
+    
+<div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300" class="hover:shadow-lg col-span-1 dark:bg-gray-600 md:col-span-2 bg-white rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+      <!-- text column -->
+      <div class="w-1/2 min-w-[200px] p-6 flex flex-col justify-center">
+          <span><i class="fa-regular fa-pen-to-square text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Custom Built Websites</h3>
+          <p>
+           Let’s craft something unique - clean code, from an original design, and develop a website that truly fits your brand.
           </p>
-          <p class="text-left mt-2">
-            What began as tinkering with HTML and CSS has grown into a full
-            skill set that allows me to build beautiful, responsive, and
-            functional websites.
+          <p class="mt-2 text-sm">
+           Complete custom development with modern technologies. Turn Figma or any other design package to a functional website. Integrate complex plugins/e-commerce technologies/customer login/etc.
           </p>
-          <p class="text-left mt-2">
-            I’m passionate about writing clean, maintainable code and designing
-            interfaces that are intuitive and accessible. Whether using modern
-            website builders or coding from scratch, I focus on simplicity and
-            performance — no unnecessary “fluff”.
-          </p>
-        </div>
-        <!-- Cards columns -->
-        <div class="grid mt-12 mb-5 gap-3 sm:grid-cols-1 md:grid-cols-2">
-          <!-- individual cards -->
-          <div
-            id="card1"
-            class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
-          >
-            <span>
-              <i
-                class="fa-solid fa-code m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
-              ></i>
-            </span>
-            <h4 class="text-slate-800 text-center text-md font-semibold">
-              Clean Code
-            </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
-              Modern, scalable, and easy-to-maintain frontend code using best
-              practices.
-            </p>
-          </div>
-
-          <div
-            id="card2"
-            class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
-          >
-            <span>
-              <i
-                class="fa-solid fa-truck-fast text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
-              ></i>
-            </span>
-            <h4 class="text-slate-800 text-center text-md font-semibold">
-              Performance
-            </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
-              Fast-loading, SEO-friendly websites to keep visitors engaged.
-            </p>
-          </div>
-          <div
-            id="card3"
-            class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
-          >
-            <span>
-              <i
-                class="fa-solid fa-lightbulb m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
-              ></i>
-            </span>
-            <h4 class="text-slate-900 text-center text-md font-semibold">
-              Responsive Design
-            </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
-              Layouts that look great on every device and screen size.
-            </p>
-          </div>
-          <div
-            id="card4"
-            class="bg-gray-50 min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
-          >
-            <span>
-              <i
-                class="fa-solid fa-user-plus text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
-              ></i>
-            </span>
-            <h4 class="text-slate-900 text-center text-md font-semibold">
-              User-Centered
-            </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
-              Creating websites with accessibility and user experience in mind.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services section -->
-    <section id="services" class="max-w-7xl mx-auto p-10 space-y-8">
-      <h2 class="text-3xl font-bold text-center mb-8">My Services</h2>
-
-      <!-- 2-column grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- Left Column: Skills -->
-        <div class="flex flex-col justify-center space-y-8">
-          <h3
-            class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
-          >
-            Technologies I Use Today
-          </h3>
-
-          <div class="space-y-4">
-            <!-- HTML -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >HTML</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >97%</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-              >
-                <div
-                  class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                  data-width="97%"
-                  style="width: 0; transition: width 1.5s ease-out"
-                ></div>
-              </div>
-            </div>
-
-            <!-- CSS -->
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >CSS</span
-                >
-                <span class="font-semibold text-gray-800 dark:text-gray-100"
-                  >95%</span
-                >
-              </div>
-              <div
-                class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-              >
-                <div class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4
-                rounded-full animate-progress" data-width="95%" style="width: 0;
-                transition: width 1.5s ease-out;"" >
-              </div>
-            </div>
-          </div>
-
-          <!-- JavaScript -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >JavaScript</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >90%</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                data-width="90%"
-                style="width: 0; transition: width 1.5s ease-out"
-              ></div>
-            </div>
-          </div>
-
-          <!-- TailwindCSS -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >TailwindCSS</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >96%</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                data-width="96%"
-                style="width: 0; transition: width 1.5s ease-out"
-              ></div>
-            </div>
-          </div>
-
-          <!-- React (loading) -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >React</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Currently loading...</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Figma (loading) -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Figma</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Currently loading...</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden relative"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full w-1/2"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Wix -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >Wix</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >96%</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                data-width="96%"
-                style="width: 0; transition: width 1.5s ease-out"
-              ></div>
-            </div>
-          </div>
-
-          <!-- WordPress -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >WordPress</span
-              >
-              <span class="font-semibold text-gray-800 dark:text-gray-100"
-                >96%</span
-              >
-            </div>
-            <div
-              class="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4 overflow-hidden"
-            >
-              <div
-                class="bg-gradient-to-r from-cyan-400 to-purple-600 h-4 rounded-full animate-progress"
-                data-width="96%"
-                style="width: 0; transition: width 1.5s ease-out"
-              ></div>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div class="flex flex-col justify-center space-y-6">
-        <h3
-          class="text-xl font-bold text-center md:text-left mb-6 text-gray-900 dark:text-gray-100"
-        >
-          Services You Can Consume
-        </h3>
-
-        <div class="flex flex-col gap-4 w-full">
-          <!-- Standard Template Website -->
-          <div
-            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
-          >
-            <h4>
-              <span class="font-semibold mb-2 text-center dark:text-gray-300">
-                Standard Template Website (WordPress, Wix, etc.)
-              </span>
-            </h4>
-            <p
-              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-            >
-              Up to 5 pages or sections, fully functional using pre-built
-              templates. Ideal for small businesses who want a fast, reliable
-              website.
-            </p>
-          </div>
-
-          <!-- Custom Website -->
-          <div
-            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
-          >
-            <h4>
-              <span class="font-semibold mb-2 text-center dark:text-gray-300">
-                Custom Website (5+ pages, coded)
-              </span>
-            </h4>
-            <p
-              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-            >
-              Complete custom development with modern technologies. I can
-              implement your design or create a design from scratch tailored to
-              your brand.
-            </p>
-          </div>
-
-          <!-- Hosting Services -->
-          <div
-            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
-          >
-            <h4>
-              <span class="font-semibold mb-2 text-center dark:text-gray-300"
-                >Hosting Services</span
-              >
-            </h4>
-            <p
-              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-            >
-              Reliable hosting setup and management to keep your website fast,
-              secure, and online 24/7.
-            </p>
-          </div>
-
-          <!-- Ongoing Website Updates -->
-          <div
-            class="gradient-border p-4 shadow-lg text-gray-800 flex flex-col justify-center items-center hover:scale-105 transition-transform duration-300 w-full"
-          >
-            <h4>
-              <span class="font-semibold mb-2 text-center dark:text-gray-300"
-                >Ongoing Website Updates & Changes</span
-              >
-            </h4>
-            <p
-              class="text-sm md:text-base text-gray-600 dark:text-gray-300 text-center md:text-left"
-            >
-              Only for websites I created. Regular updates, bug fixes, and
-              feature additions.
-            </p>
-          </div>
-        </div>
+      <!-- image column -->
+      <div class="w-1/2 min-w-[200px] min-h-86 overflow-hidden">
+        <img src="images/web-development.jpg" 
+             alt="Template site packages" 
+             class="w-full h-full object-cover rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none">
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
+ <section data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" id="testimonial" class="bg-gray-100 dark:bg-gray-900 py-8">
+  <div class="max-w-3xl mx-auto text-center px-6">
+    
+   
+
+    <!-- Testimonial card -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 hover:scale-105">
+       <!-- Quote icon -->
+    <span><i class="fa-solid fa-quote-left text-3xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+      <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed">
+       Working with Andy was such a smooth experience. Our website looks fantastic, loads quickly, and updating it is really easy. She listened to our needs at every step and genuinely cares about helping small businesses succeed. I’d happily recommend Andy to anyone who wants a reliable and committed developer.
+      </p>
+<span><i class="fa-solid fa-quote-right text-3xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent""></i></span>
+      <!-- Client info -->
+      <div class="mt-6">
+        <p class="font-bold text-gray-900 dark:text-gray-50 text-xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Buick's Alloa Ltd</p>
+      
+      </div>
+    </div>
+
+  </div>
+</section>
+    
 
     <!-- CTA section -->
-    <section id="cta" class="max-w-7xl m-10 mx-auto text-center text-gray-50">
+    <section id="cta" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl bg-white dark:bg-gray-700 m-10 mx-auto text-center text-gray-50">
       <div
         class="bg-gradient-to-l py-10 from-cyan-500 to-purple-500 rounded text-grey-50 text-center max-w-7xl m-10 p-10 mx-auto text-center flex flex-col justify-center items-center"
       >
@@ -730,9 +501,7 @@
           Let's build something amazing!
         </h2>
         <p class="text-lg font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
-          I'm always excited to work on new projects or collaborate with
-          creators. Whether you have a clear vision or just an idea, let's
-          discuss how we can bring it to life.
+       Let's create something that grows with you - be that a fresh website, custom code or something in between!
         </p>
 
         <!-- Centering div for 3 sections -->
@@ -770,17 +539,17 @@
     </section>
 
     <!-- Portfolio section -->
-    <section
+    <section data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
       id="portfolio"
       class="max-w-7xl mx-auto p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
     >
-      <h2 class="text-3xl font-bold text-center mb-10">My Latest Work</h2>
+      <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">My Latest Work</h2>
 
       <!-- Cards grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card -->
         <div
-          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          class="bg-white flex flex-col  dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <a
             href="https://chrystalexecutivetravel.co.uk/"
@@ -794,7 +563,7 @@
               loading="lazy"
             />
           </a>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">Executive Travel Website</h3>
             <p class="mb-4">
               A sleek, modern site for a premium travel service.
@@ -807,7 +576,7 @@
               href="https://chrystalexecutivetravel.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              class="mt-auto w-max inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
               aria-label="View the Executive Travel Website project by BuiltByAndy"
             >
               Visit Site
@@ -816,8 +585,8 @@
         </div>
 
         <!-- Repeat for other projects -->
-        <div
-          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"
+          class="bg-white flex flex-col dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <a
             href="https://smileplanneruk-turkey.com/"
@@ -831,7 +600,7 @@
               loading="lazy"
             />
           </a>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">
               Cosmetic Dentistry Website
             </h3>
@@ -845,7 +614,7 @@
               href="https://smileplanneruk-turkey.com/"
               target="_blank"
               rel="noopener"
-              class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              class="inline-block mt-auto w-max px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
               aria-label="View the Dental Agency Website project by BuiltByAndy"
             >
               Visit Site
@@ -853,8 +622,8 @@
           </div>
         </div>
 
-        <div
-          class="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"
+          class="bg-white flex flex-col dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <a
             href="https://styled-calculator.netlify.app/"
@@ -868,7 +637,7 @@
               loading="lazy"
             />
           </a>
-          <div class="p-5">
+          <div class="p-5 flex flex-col flex-1">
             <h3 class="text-xl font-semibold mb-2">Styled Calculator</h3>
             <p class="mb-4">
               An interactive calculator with custom styling and smooth
@@ -881,7 +650,7 @@
               href="https://styled-calculator.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
+              class="inline-block mt-auto w-max px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
               aria-label="View the Styled Calculator App project by BuiltByAndy"
             >
               View App
@@ -1034,8 +803,196 @@
       </div>
     </section>
 
+<section id="faq" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl mx-auto p-10 bg-white">
+  <!-- Section heading -->
+  <h2 class="font-header text-2xl sm:text-3xl font-extrabold text-center my-10
+             bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+    Your questions answered simply
+  </h2>
+
+  <p class="font-header text-md sm:text-xl md:text-2xl font-bold text-center mb-8">
+    Wondering how we can work together? Here are the answers to the most common questions I get from business owners — let's make your website journey easy and enjoyable.
+  </p>
+
+  <!-- FAQ grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-2">
+
+    <!-- 1️⃣ Specialisation -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        What do you specialise in?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        I create template-based websites for small and medium businesses, and transform designer materials into functional, clean, performant websites. I also provide ongoing hosting and maintenance services for businesses that want to focus on what they do best.
+      </p>
+    </div>
+
+    <!-- 2️⃣ Complex designs -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        Are you a website designer?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        My focus is web development, not creating complex designs. I can take any design or concept and turn it into a functional, high-performance website. For clients who need a faster solution, I offer template-based sites that are quick to launch while still looking professional.
+      </p>
+    </div>
+
+    <!-- 3️⃣ Launch time -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        How fast can my site launch?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        Most standard projects wrap up in 1–2 weeks (up to 5 pages). More complex sites with custom integrations typically take 2–4 weeks. Communication is key — you’ll always know the progress of your project.
+      </p>
+    </div>
+
+    <!-- 4️⃣ Improving current site -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        Can you improve my current site?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        Absolutely! I can add new features, improve functionality, and tidy up your existing code. Depending on the technology used, sometimes rebuilding the site is faster and more efficient than upgrading the old one.
+      </p>
+    </div>
+
+    <!-- 5️⃣ Post-launch support -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        Do you offer ongoing support?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        Yes! I provide flexible maintenance plans and am always available for updates, troubleshooting, or implementing new ideas. You’ll always have support when needed.
+      </p>
+    </div>
+
+    <!-- 6️⃣ Getting started -->
+    <div class="p-4 shadow-lg bg-gray-100 dark:bg-gray-700 border-l border-gray-700 dark:border-gray-50">
+      <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
+        How do we get started?
+      </h3>
+      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+        Reach out with your ideas or requirements. We’ll discuss your goals, map out a plan, and start the project. I’ll guide you every step of the way.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- About Me section -->
+    <section id="about" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl p-10 text-center mx-auto">
+     
+      <!-- Section start -->
+      <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">About Me</h2>
+      <p class="text-lg font-semibold mt-5">
+        I'm a passionate Frontend Developer who loves combining modern web
+        technologies with thoughtful design, and brings brands to life online in
+        a way that is both engaging and functional.
+      </p>
+      <!-- 2 col grid with text/image -->
+      <div
+        class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center"
+      >
+        <!-- text column -->
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+          <h3 class="text-xl font-semibold mt-5 mb-5">My Journey</h3>
+          <p class="text-left mt-2 text-md">
+            My journey into frontend development started with curiosity about
+            how websites work. After 13+ years in IT, helping organizations
+            optimize datacenters and operations, I realized I wanted to
+            understand how technology is experienced by end users.
+          </p>
+          <p class="text-left mt-2">
+            What began as tinkering with HTML and CSS has grown into a full
+            skill set that allows me to build beautiful, responsive, and
+            functional websites.
+          </p>
+          <p class="text-left mt-2">
+            I’m passionate about writing clean, maintainable code and designing
+            interfaces that are intuitive and accessible. Whether using modern
+            website builders or coding from scratch, I focus on simplicity and
+            performance — no unnecessary “fluff”.
+          </p>
+        </div>
+        <!-- Cards columns -->
+        <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300" class="grid mt-12 mb-5 gap-3 sm:grid-cols-1 md:grid-cols-2">
+          <!-- individual cards -->
+          <div
+            id="card1"
+            class="bg-gray-100 shadow-lg min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
+          >
+            <span>
+              <i
+                class="fa-solid fa-code m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+              ></i>
+            </span>
+            <h4 class="text-slate-800 text-center text-md font-semibold">
+              Clean Code
+            </h4>
+            <p class="text-slate-800 text-center text-sm p-1">
+              Modern, scalable, and easy-to-maintain frontend code using best
+              practices.
+            </p>
+          </div>
+
+          <div
+            id="card2" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"
+            class="bg-gray-100 shadow-lg min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
+          >
+            <span>
+              <i
+                class="fa-solid fa-truck-fast text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+              ></i>
+            </span>
+            <h4 class="text-slate-800 text-center text-md font-semibold">
+              Performance
+            </h4>
+            <p class="text-slate-800 text-center text-sm p-1">
+              Fast-loading, SEO-friendly websites to keep visitors engaged.
+            </p>
+          </div>
+          <div
+            id="card3" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"
+            class="bg-gray-100 shadow-lg min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
+          >
+            <span>
+              <i
+                class="fa-solid fa-lightbulb m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+              ></i>
+            </span>
+            <h4 class="text-slate-900 text-center text-md font-semibold">
+              Responsive Design
+            </h4>
+            <p class="text-slate-800 text-center text-sm p-1">
+              Layouts that look great on every device and screen size.
+            </p>
+          </div>
+          <div 
+            id="card4" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"
+            class="bg-gray-100 shadow-lg min-h-[20vh] w-full rounded border border-gray-100 flex flex-col items-center justify-center"
+          >
+            <span>
+              <i
+                class="fa-solid fa-user-plus text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+              ></i>
+            </span>
+            <h4 class="text-slate-900 text-center text-md font-semibold">
+              User-Centered
+            </h4>
+            <p class="text-slate-800 text-center text-sm p-1">
+              Creating websites with accessibility and user experience in mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Footer section -->
-    <footer
+    <footer data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
       class="relative mt-5 max-w-7xl mx-auto bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
     >
       <section class="py-10 sm:pt-16 lg:pt-24">
@@ -1074,10 +1031,10 @@
               </li>
               <li>
                 <a
-                  href="#testimonials"
-                  title="testimonials-section"
+                  href="#faq"
+                  title="faq-section"
                   class="font-semibold text-base transition-all duration-200 hover:text-cyan-300 focus:scale-115"
-                  >Testimonials</a
+                  >FAQ's</a
                 >
               </li>
               <li>

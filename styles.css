@@ -70,3 +70,8 @@
   width: 0;
   transition: width 2.5s ease-out;
 }
+
+img {
+  image-rendering: auto; /* default smoothing */
+  image-rendering: smooth; /* some browsers */
+}

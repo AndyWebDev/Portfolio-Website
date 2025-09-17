@@ -158,3 +158,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   bars.forEach((bar) => observer.observe(bar));
 });
+
+// tailwind.config.js
+module.exports = {
+  darkMode: "class",
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./index.html"],
+  theme: {
+    extend: {
+      fontFamily: {
+        vayu: ['"Vayu Sans"', "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
