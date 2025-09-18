@@ -75,3 +75,9 @@ img {
   image-rendering: auto; /* default smoothing */
   image-rendering: smooth; /* some browsers */
 }
+
+body {
+  body {
+    overflow-x: hidden;
+  }
+}
