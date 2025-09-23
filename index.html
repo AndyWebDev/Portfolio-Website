@@ -36,29 +36,20 @@
 
     <link rel="stylesheet" href="styles.css" />
     <!-- AOS Animation-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+<link rel="stylesheet" href="/public/vendor/aos.css">
 
-     <!-- FontAwesome -->
-    <link
+<!-- AOS JS -->
+<script src="/public/vendor/aos.js"></script>
+
+  <!-- Font Awesome Free CSS -->
+  <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
     <!-- TailwindCSS theme -->
-    <script src="https://cdn.tailwindcss.com"></script>
-   <script>
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        fontFamily: {
-          header: ["Merriweather Sans", "sans-serif"], // Custom font class for headers
-        },
-      },
-    },
-  };
-</script>
-   
+    <link rel="stylesheet" href="/public/tailwind.css">
 
     <link
       rel="icon"
@@ -69,8 +60,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
    
-<!-- Google Font: Merriweather Sans -->
-<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   </head>
 
@@ -142,7 +132,7 @@
 
         <!-- Hamburger for Mobile -->
         <div
-          class="md:hidden text-gray-100 text-2xl cursor-pointer"
+          class="md:hidden text-gray-100 text-2xl cursor-pointer px-2"
           id="menu-toggle"
         aria-label="Menu-icon - home">
           <i
@@ -155,6 +145,8 @@
       <div
         class="md:hidden hidden bg-black"
         id="mobile-menu"
+         role="button"
+  tabindex="0"
         aria-label="Mobile navigation"
       >
         <ul class="flex flex-col gap-3 p-4">
@@ -208,9 +200,10 @@
       <!-- Background image -->
       <img
         class="absolute inset-0 w-full h-full object-cover"
-        src="images/developer-8829735_1920.jpg"
+        src="images/developer-8829735_1920.webp"
         alt="Built by Andy website background - computer on the desk with VS Code open, showing code"
-      />
+       loading="eager"
+        fetchpriority="high"/>
 
       <!-- Bubble container -->
       <div class="absolute inset-0 z-0 overflow-hidden max-w-screen h-screen">
@@ -282,7 +275,7 @@
             >
             <span
               class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
-              >Webflow</span
+              >WordPress</span
             >
           </div>
         </div>
@@ -303,42 +296,56 @@
           </button>
         </div>
 
-        <!-- Social Icons outside overlay -->
-        <div class="mt-6 flex gap-6 z-20 relative justify-center items-center">
-          <!-- GitHub -->
-          <div
-            class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110"
-          >
-            <a
-              href="https://github.com/AndyWebDev"
-              class="text-white text-2xl hover:text-cyan-400 transition-colors"
-            >
-              <i class="fa-brands fa-github" style="color: white"></i>
-            </a>
-          </div>
-          <!-- LinkedIn -->
-          <div
-            class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110"
-          >
-            <a
-              href="#"
-              class="text-white text-2xl hover:text-cyan-400 transition-colors"
-            >
-              <i class="fa-brands fa-linkedin" style="color: white"></i>
-            </a>
-          </div>
-          <!-- Email -->
-          <div
-            class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110"
-          >
-            <a
-              href="mailto:contact@builtbyandy.com"
-              class="text-white text-2xl hover:text-cyan-400 transition-colors"
-            >
-              <i class="fa-regular fa-envelope" style="color: white"></i>
-            </a>
-          </div>
-        </div>
+<!-- Social Icons outside overlay -->
+<div class="mt-6 flex gap-6 z-20 relative justify-center items-center">
+  <!-- GitHub -->
+  <div
+    class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
+  >
+    <a
+      href="https://github.com/AndyWebDev" target="_blank"   aria-label="GitHub profile of BuiltbyAndy"
+      class="text-white hover:text-cyan-400 transition-colors"
+    >
+      <!-- GitHub Heroicon (outline) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.76-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404 11.5 11.5 0 013.003.404c2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.242 2.873.118 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.804 5.625-5.475 5.921.43.37.814 1.102.814 2.222 0 1.604-.015 2.896-.015 3.287 0 .32.216.694.825.576C20.565 21.796 24 17.303 24 12c0-6.628-5.373-12-12-12z" clip-rule="evenodd"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- LinkedIn -->
+  <div
+    class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
+  >
+    <a
+      href="https://www.linkedin.com/company/builtbyandy/"   aria-label="Linkedin profile of BuiltByAndy"
+      class="text-white hover:text-cyan-400 transition-colors" target="_blank"
+    >
+      <!-- LinkedIn Heroicon (solid) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 448 512">
+        <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.64 53.64 0 1153.64-53.64 53.61 53.61 0 01-53.64 53.64zm394.24 340h-92.68V302.4c0-34.7-12.38-58.4-43.34-58.4-23.64 0-37.72 15.89-43.88 31.22-2.26 5.5-2.84 13.12-2.84 20.76V448h-92.68s1.24-259.2 0-286.1h92.68v40.54c-.18.29-.44.61-.61.91h.61v-.91c12.33-19 34.43-46.13 83.74-46.13 61.18 0 107.08 39.87 107.08 125.44V448z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Email -->
+  <div
+    class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
+  >
+    <a
+      href="mailto:contact@builtbyandy.com"   aria-label="Email address BuiltByAndy"
+      class="text-white hover:text-cyan-400 transition-colors"
+    >
+      <!-- Mail Heroicon (outline) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8H3V8h18v8z"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+
 
         <!-- Explore More -->
         <div
@@ -375,37 +382,46 @@
     Web development focused on your business needs
   </h2>
   <!-- Theme Toggle button -->
-      <div class="flex justify-end p-2">
-        <button
-          id="themeToggle"
-          class="text-2xl p-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 shadow-lg transition-all duration-300 hover:scale-110"
-          aria-label="Toggle website theme from dark to light or vice-versa"
-        >
-          <i id="iconSun" class="fa-solid fa-sun text-yellow-400"></i>
-          <i id="iconMoon" class="fa-solid fa-moon hidden"></i>
-        </button>
-      </div>
+   <div class="flex justify-end p-2">
+  <button
+    id="themeToggle"
+    class="text-2xl p-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 shadow-lg transition-all duration-300 hover:scale-110"
+    aria-label="Toggle website theme from dark to light or vice-versa"
+  >
+    <!-- Sun icon -->
+    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414m0-12.728l1.414 1.414M17.95 17.95l1.414 1.414M12 8a4 4 0 100 8 4 4 0 000-8z" />
+    </svg>
+
+    <!-- Moon icon -->
+    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+    </svg>
+  </button>
+</div>
   <!-- Grid container -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     
     <!-- 1️⃣ First card (2x width) -->
-    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300" class="hover:shadow-lg col-span-1 md:col-span-2 bg-white dark:bg-gray-600 rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+    <div data-aos="fade-right" data-aos-duration="2000" class="hover:shadow-lg col-span-1 md:col-span-2 bg-white dark:bg-gray-600 rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
       <!-- text column -->
       <div class="w-full sm:w-1/2 min-w-[120px] p-6 flex flex-col justify-center">
-          <span><i class="fa-regular fa-address-card text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+          <span><i class="fa-regular fa-address-card text-2xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
           <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Template site packages</h3>
           <p>
             Kickstart your online presence with stylish, ready-to-go templates.
             Fast, affordable, and tailored for your goals.
           </p>
-          <p class="mt-2 text-sm">
+          <p class="mt-2">
             Up to 5 pages or sections, fully functional using pre-built templates. Ideal for small businesses who want a fast, reliable website.
           </p>
       </div>
 
       <!-- image column -->
       <div class="w-full sm:w-1/2 min-w-[120px] min-h-86 overflow-hidden">
-        <img src="images/website-template.jpg" 
+        <img src="images/website-template.webp" 
              alt="Template site packages" 
              class="w-full h-full object-cover rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none">
 
@@ -413,23 +429,23 @@
     </div>
 
     <!-- 2️⃣ Second card (1x width) -->
-    <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
-      <img src="images/coding-support.jpg" alt="Ongoing care" class="w-full h-56 object-cover rounded-xl mb-4">
-       <span><i class="fa-regular fa-thumbs-up text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+    <div data-aos="fade-left" data-aos-duration="2000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+      <img src="images/coding-support.webp" alt="Ongoing care" class="w-full h-56 object-cover rounded-xl mb-4">
+       <span><i class="fa-regular fa-thumbs-up text-2xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
       <h3 class="font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
         Ongoing care &amp; support
       </h3>
       <p>
         Relax knowing your site is managed, updated, and ready for what’s next - help is just a message away.
       </p>
-      <p class="mt-2 text-sm">
+      <p class="mt-2">
         Reliable hosting setup and management to keep your website fast, secure, and online 24/7.
       </p>
     </div>
 
     <!-- 3️⃣ Middle single card: image above text -->
-    <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
-      <img src="images/seo post.jpg" alt="SEO that works" class="w-full h-56 object-cover rounded-xl mb-4">
+    <div data-aos="fade-right" data-aos-duration="2000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+      <img src="images/seo post.webp" alt="SEO that works" class="w-full h-56 object-cover rounded-xl mb-4">
        <span><i class="fa-regular fa-file-lines text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
       <h3 class=" font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
        Ongoing Website Updates & Changes
@@ -437,14 +453,14 @@
       <p>
         Continuosly improve your brand and online visibility by adding new features and content that connect you with your ideal audience.
       </p>
-      <p class="mt-2 text-sm">
+      <p class="mt-2">
         Regular updates, bug fixes, and feature additions for websites we created.
       </p>
     </div>
 
     <!-- 4️⃣ Last double card: text left, image right -->
     
-<div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300" class="hover:shadow-lg col-span-1 dark:bg-gray-600 md:col-span-2 bg-white rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+<div data-aos="fade-left" data-aos-duration="2000"  class="hover:shadow-lg col-span-1 dark:bg-gray-600 md:col-span-2 bg-white rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
       <!-- text column -->
       <div class="w-full sm:w-1/2 min-w-[120px] p-6 flex flex-col justify-center">
           <span><i class="fa-regular fa-pen-to-square text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
@@ -452,14 +468,14 @@
           <p>
            Let’s craft something unique - clean code, from an original design, and develop a website that truly fits your brand.
           </p>
-          <p class="mt-2 text-sm">
+          <p class="mt-2">
            Complete custom development with modern technologies. Turn Figma or any other design package to a functional website. Integrate complex plugins/e-commerce technologies/customer login/etc.
           </p>
       </div>
 
       <!-- image column -->
       <div class="w-full sm:w-1/2 min-w-[120px] min-h-86 overflow-hidden">
-        <img src="images/web-development.jpg" 
+        <img src="images/web-development.webp" 
              alt="Template site packages" 
              class="w-full h-full object-cover rounded-tr-2xl rounded-br-2xl rounded-tl-none rounded-bl-none">
       </div>
@@ -481,7 +497,7 @@
 <span><i class="fa-solid fa-quote-right text-3xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent""></i></span>
       <!-- Client info -->
       <div class="mt-6">
-        <p class="font-bold text-gray-900 dark:text-gray-50 text-xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Buick's Alloa Ltd</p>
+        <p class="font-bold text-gray-900 dark:text-gray-50 text-xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Chrystal Executive Travel</p>
       
       </div>
     </div>
@@ -499,7 +515,7 @@
         >
           Let's build something amazing!
         </h2>
-        <p class="text-lg font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
+        <p class="text-xl font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
        Let's create something that grows with you - be that a fresh website, custom code or something in between!
         </p>
 
@@ -553,7 +569,7 @@
           <a
             href="https://chrystalexecutivetravel.co.uk/"
             target="_blank"
-            rel="noopener"
+            rel="noopener" aria-label="View the Executive Travel Website project by BuiltByAndy"
           >
             <img
               src="images/exectravel.png"
@@ -567,7 +583,7 @@
             <p class="mb-4">
               A sleek, modern site for a premium travel service.
             </p>
-            <p class="text-sm mb-4">
+            <p class=" mb-4">
               Custom HTML/CSS/JS/Tailwind build. Hosting and management
               included.
             </p>
@@ -590,7 +606,7 @@
           <a
             href="https://smileplanneruk-turkey.com/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer" aria-label="View the Dental Agency Website project by BuiltByAndy"
           >
             <img
               src="images\smileplanner.png"
@@ -606,7 +622,7 @@
             <p class="mb-4">
               A clean, modern site for a dental agency service.
             </p>
-            <p class="text-sm mb-4">
+            <p class=" mb-4">
               Designed and developed with HTML, CSS, JavaScript and Tailwind.
             </p>
             <a
@@ -627,13 +643,13 @@
           <a
             href="https://styled-calculator.netlify.app/"
             target="_blank"
-            rel="noopener"
+            rel="noopener" aria-label="View the Styled Calculator App project by BuiltByAndy"
           >
             <img
               src="images\calculator.png"
               alt="Preview of Styled Calculator application"
               class="w-full h-48 object-cover"
-              loading="lazy"
+              loading="lazy" 
             />
           </a>
           <div class="p-5 flex flex-col flex-1">
@@ -642,7 +658,7 @@
               An interactive calculator with custom styling and smooth
               animations.
             </p>
-            <p class="text-sm mb-4">
+            <p class=" mb-4">
               Application created with HTML, CSS and JavaScript.
             </p>
             <a
@@ -704,7 +720,7 @@
         >
           <!-- Full Name -->
           <div>
-            <label class="block text-sm font-medium text-gray-700"
+            <label class="block font-medium text-gray-700"
               >Full Name</label
             >
             <input
@@ -717,7 +733,7 @@
 
           <!-- Email -->
           <div>
-            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <label class="block font-medium text-gray-700">Email</label>
             <input
               type="email"
               name="email"
@@ -729,7 +745,7 @@
 
           <!-- Telephone -->
           <div>
-            <label class="block text-sm font-medium text-gray-700"
+            <label class="block font-medium text-gray-700"
               >Telephone</label
             >
             <input
@@ -738,12 +754,12 @@
               class="mt-1 block w-full rounded text-gray-900 p-2 border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               required
             />
-            <p class="text-red-600 text-sm hidden"></p>
+            <p class="text-red-600 hidden"></p>
           </div>
 
           <!-- Type of Service -->
           <div>
-            <label class="block text-sm font-medium text-gray-700"
+            <label class="block font-medium text-gray-700"
               >Type of service you are interested in</label
             >
             <select
@@ -761,12 +777,12 @@
                 I don't know, I need to discuss
               </option>
             </select>
-            <p class="text-red-600 text-sm hidden"></p>
+            <p class="text-red-600 hidden"></p>
           </div>
 
           <!-- Other Comments -->
           <div>
-            <label class="block text-sm font-medium text-gray-700"
+            <label class="blockfont-medium text-gray-700"
               >Share a few details about your project</label
             >
             <textarea
@@ -822,7 +838,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         What do you specialise in?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class=" sm:text-md md:text-lg leading-relaxed">
         I create template-based websites for small and medium businesses, and transform designer materials into functional, clean, performant websites. I also provide ongoing hosting and maintenance services for businesses that want to focus on what they do best.
       </p>
     </div>
@@ -832,7 +848,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         Are you a website designer?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class="sm:text-md md:text-lg leading-relaxed">
         My focus is web development, not creating complex designs. I can take any design or concept and turn it into a functional, high-performance website. For clients who need a faster solution, I offer template-based sites that are quick to launch while still looking professional.
       </p>
     </div>
@@ -842,7 +858,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         How fast can my site launch?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class="sm:text-md md:text-lg leading-relaxed">
         Most standard projects wrap up in 1–2 weeks (up to 5 pages). More complex sites with custom integrations typically take 2–4 weeks. Communication is key — you’ll always know the progress of your project.
       </p>
     </div>
@@ -852,7 +868,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         Can you improve my current site?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class=" sm:text-md md:text-lg leading-relaxed">
         Absolutely! I can add new features, improve functionality, and tidy up your existing code. Depending on the technology used, sometimes rebuilding the site is faster and more efficient than upgrading the old one.
       </p>
     </div>
@@ -862,7 +878,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         Do you offer ongoing support?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class=" sm:text-md md:text-lg leading-relaxed">
         Yes! I provide flexible maintenance plans and am always available for updates, troubleshooting, or implementing new ideas. You’ll always have support when needed.
       </p>
     </div>
@@ -872,7 +888,7 @@
       <h3 class="font-header text-md sm:text-lg md:text-xl font-extrabold text-center mb-2">
         How do we get started?
       </h3>
-      <p class="text-sm sm:text-md md:text-lg leading-relaxed">
+      <p class="sm:text-md md:text-lg leading-relaxed">
         Reach out with your ideas or requirements. We’ll discuss your goals, map out a plan, and start the project. I’ll guide you every step of the way.
       </p>
     </div>
@@ -887,7 +903,7 @@
      
       <!-- Section start -->
       <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">About Me</h2>
-      <p class="text-lg font-semibold mt-5">
+      <p class="text-xl font-semibold mt-5">
         I'm a passionate Frontend Developer who loves combining modern web
         technologies with thoughtful design, and brings brands to life online in
         a way that is both engaging and functional.
@@ -899,18 +915,18 @@
         <!-- text column -->
         <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
           <h3 class="text-xl font-semibold mt-5 mb-5">My Journey</h3>
-          <p class="text-left mt-2 text-md">
+          <p class="text-left mt-2 text-lg">
             My journey into frontend development started with curiosity about
             how websites work. After 13+ years in IT, helping organizations
             optimize datacenters and operations, I realized I wanted to
             understand how technology is experienced by end users.
           </p>
-          <p class="text-left mt-2">
+          <p class="text-left mt-2 text-lg">
             What began as tinkering with HTML and CSS has grown into a full
             skill set that allows me to build beautiful, responsive, and
             functional websites.
           </p>
-          <p class="text-left mt-2">
+          <p class="text-left mt-2 text-lg">
             I’m passionate about writing clean, maintainable code and designing
             interfaces that are intuitive and accessible. Whether using modern
             website builders or coding from scratch, I focus on simplicity and
@@ -932,7 +948,7 @@
             <h4 class="text-slate-800 text-center text-md font-semibold">
               Clean Code
             </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
+            <p class="text-slate-800 text-center  p-1">
               Modern, scalable, and easy-to-maintain frontend code using best
               practices.
             </p>
@@ -950,7 +966,7 @@
             <h4 class="text-slate-800 text-center text-md font-semibold">
               Performance
             </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
+            <p class="text-slate-800 text-center  p-1">
               Fast-loading, SEO-friendly websites to keep visitors engaged.
             </p>
           </div>
@@ -966,7 +982,7 @@
             <h4 class="text-slate-900 text-center text-md font-semibold">
               Responsive Design
             </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
+            <p class="text-slate-800 text-center p-1">
               Layouts that look great on every device and screen size.
             </p>
           </div>
@@ -982,7 +998,7 @@
             <h4 class="text-slate-900 text-center text-md font-semibold">
               User-Centered
             </h4>
-            <p class="text-slate-800 text-center text-sm p-1">
+            <p class="text-slate-800 text-center p-1">
               Creating websites with accessibility and user experience in mind.
             </p>
           </div>
@@ -1001,7 +1017,7 @@
         >
           <!-- Company Links -->
           <div>
-            <h2 class="font-semibold tracking-widest uppercase text-center">
+            <h2 class="font-semibold tracking-widest uppercase text-center text-xl">
               Company
             </h2>
             <ul class="mt-6 flex flex-wrap justify-center gap-6">
@@ -1009,7 +1025,7 @@
                 <a
                   href="#new-services"
                   title="services-section"
-                  class="font-semibold text-base transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
                   >Services</a
                 >
               </li>
@@ -1017,7 +1033,7 @@
                 <a
                   href="#portfolio"
                   title="portfolio-section"
-                  class="font-semibold text-base transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
                   >Portfolio</a
                 >
               </li>
@@ -1025,7 +1041,7 @@
                 <a
                   href="#faq"
                   title="faq-section"
-                  class="font-semibold text-base transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
                   >FAQ's</a
                 >
               </li>
@@ -1033,7 +1049,7 @@
                 <a
                   href="#about"
                   title="about-section"
-                  class="font-semibold text-base transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
                   >About</a
                 >
               </li>
@@ -1041,7 +1057,7 @@
                 <a
                   href="#cta"
                   title="contact-section"
-                  class="font-semibold text-base transition-all duration-200 hover:text-cyan-400 hover:scale-125"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-400 hover:scale-125"
                   >Contact</a
                 >
               </li>
@@ -1052,7 +1068,7 @@
           <div
             class="flex flex-col items-center justify-between bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
           >
-            <h2 class="font-semibold tracking-widest uppercase text-center">
+            <h2 class="font-semibold tracking-widest text-xl uppercase text-center">
               Connect with us / Follow us
             </h2>
             <div
@@ -1061,18 +1077,18 @@
               <a
                 href="https://github.com/AndyWebDev"
                 target="_blank"
-                class="hover:scale-110"
+                class="hover:scale-110" aria-label="View the GitHub profile of BuiltByAndy"
               >
                 <i
                   class="fa-brands fa-github m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
-              <a href="#" target="_blank" class="hover:scale-110"
+              <a href="https://www.facebook.com/profile.php?id=61581209611043" target="_blank" class="hover:scale-110" aria-label="View the Facebook profile of BuiltByAndy"
                 ><i
                   class="fa-brands fa-facebook m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
-              <a href="#" target="_blank" class="hover:scale-110"
+              <a href="https://www.linkedin.com/company/builtbyandy/" target="_blank" class="hover:scale-110" aria-label="View the Linkedin profile of BuiltByAndy"
                 ><i
                   class="fa-brands fa-linkedin m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
@@ -1081,7 +1097,7 @@
                 href="https://wa.me/447833200868?text=Hello%20I%20would%20like%20to%20discuss%20a%20project"
                 target="_blank"
                 id="whatsapp-btn"
-                class="hover:scale-110 transition-transform"
+                class="hover:scale-110 transition-transform" aria-label="Connect on WhatsApp with BuiltByAndy"
               >
                 <i
                   class="fa-brands fa-whatsapp text-4xl m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
@@ -1094,13 +1110,13 @@
         <hr class="mt-16 mb-10 border-gray-50" />
 
         <p
-          class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 flex justify-center items-center gap-2 md:gap-4"
+          class="text-md text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 flex justify-center items-center gap-2 md:gap-4"
         >
           © Copyright<span id="year"></span>
         </p>
 
         <p
-          class="text-sm text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
+          class="text-md text-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
         >
           All Rights Reserved by <a href="#home">BuiltByAndy</a>
         </p>
@@ -1109,7 +1125,7 @@
           <a
             href="Privacy-policy.html"
             target="_blank"
-            class="underline hover:text-blue-600 text-sm mt-1 md:mt-0"
+            class="underline hover:text-blue-600 text-md mt-1 md:mt-0"
             aria-label="See the detailed Privacy Policy terms and conditions"
           >
             Privacy Policy
@@ -1130,7 +1146,7 @@
             id="cookie-banner"
             class="bg-slate-900 text-white p-4 flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-6xl m-4 rounded shadow-lg"
           >
-            <p class="text-sm md:text-base">
+            <p class="text-md md:text-base">
               We use cookies to improve your experience and comply with GDPR. By
               using this site, you agree to our
               <a
@@ -1149,12 +1165,17 @@
         </div>
       </div>
     </footer>
+    <script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",

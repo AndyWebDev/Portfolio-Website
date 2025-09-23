@@ -75,3 +75,18 @@ img {
   image-rendering: auto; /* default smoothing */
   image-rendering: smooth; /* some browsers */
 }
+
+@font-face {
+  font-family: "Merriweather Sans";
+  src: url("/public/fonts/MerriweatherSans-Regular.woff2") format("woff2"),
+    url("/public/fonts/MerriweatherSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather Sans";
+  src: url("/public/fonts/MerriweatherSans-Bold.woff2") format("woff2"),
+    url("/public/fonts/MerriweatherSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
