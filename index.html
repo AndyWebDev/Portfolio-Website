@@ -49,7 +49,7 @@
     />
 
     <!-- TailwindCSS theme -->
-    <link rel="stylesheet" href="/public/tailwind.css">
+    <link rel="stylesheet" href="public/tailwind.css">
 
     <link
       rel="icon"
@@ -71,7 +71,7 @@
     <header class="bg-black">
       <div class="max-w-7xl mx-auto">
       <div
-        class=" flex justify-between items-center h-22 px-4"
+        class=" flex justify-between items-center w-full h-22 px-4"
       >
        <!-- Logo on the left -->
 <div id="logo" class="max-h-10 w-auto py-1 px-2">
@@ -87,12 +87,12 @@
           class="hidden md:flex items-center gap-4"
           aria-label="Main navigation"
         >
-          <ul class="grid grid-cols-5 gap-3 items-center">
+          <ul class="flex items-center gap-4">
            
             
             <li class="w-28 text-center py-2 hover:scale-110">
               <a
-                href="#new-services"
+                href="#services"
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >Services</a
               >
@@ -102,6 +102,13 @@
                 href="#portfolio"
                 class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
                 >Portfolio</a
+              >
+              </li>
+               <li class="w-28 text-center py-2 hover:scale-110">
+              <a
+                href="#prices"
+                class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+                >Prices</a
               >
               </li>
               <li class="w-28 text-center py-2 hover:scale-110">
@@ -153,16 +160,23 @@
           
           <li class="text-center py-2 hover:scale-110">
             <a
-              href="#new-services"
+              href="#services"
               class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
               >Services</a
             >
           </li>
-          <li class="text-center py-2 hover:scale-110">
+           <li class="text-center py-2 hover:scale-110">
             <a
               href="#portfolio"
               class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
               >Portfolio</a
+            >
+          </li>
+          <li class="text-center py-2 hover:scale-110">
+            <a
+              href="#prices"
+              class="text-gray-100 font-semibold text-xl hover:text-cyan-300"
+              >Prices</a
             >
           </li>
           <li class="text-center py-2 hover:scale-110">
@@ -195,7 +209,7 @@
     <!-- Hero section -->
     <section
       id="home"
-      class="relative mx-auto h-full flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
+      class="sticky top-0 mx-auto h-screen z-0 flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
     >
       <!-- Background image -->
       <img
@@ -206,7 +220,7 @@
         fetchpriority="high"/>
 
       <!-- Bubble container -->
-      <div class="absolute inset-0 z-0 overflow-hidden max-w-screen h-screen">
+      <div class="absolute inset-0 z-0 overflow-hidden max-w-screen h-screen ">
         <div
           id="bubble1"
           class="absolute w-32 h-32 rounded-full bg-yellow-200/60"
@@ -235,10 +249,38 @@
           id="bubble7"
           class="absolute w-20 h-20 rounded-full bg-cyan-200/60"
         ></div>
+        <div
+          id="bubble8"
+          class="absolute w-32 h-32 rounded-full bg-yellow-200/60"
+        ></div>
+         <div
+          id="bubble9"
+          class="absolute w-38 h-38 rounded-full bg-cyan-500/60"
+        ></div>
+        <div
+          id="bubble10"
+          class="absolute w-20 h-20 rounded-full bg-cyan-200/60"
+        ></div>
+         <div
+          id="bubble11"
+          class="absolute w-16 h-16 rounded-full bg-purple-400/60"
+        ></div>
+        <div
+          id="bubble12"
+          class="absolute w-20 h-20 rounded-full bg-blue-400/60"
+        ></div>
+        <div
+          id="bubble13"
+          class="absolute w-20 h-20 rounded-full bg-cyan-200/60"
+        ></div>
+        <div
+          id="bubble14"
+          class="absolute w-20 h-20 rounded-full bg-cyan-200/60"
+        ></div>
       </div>
 
       <!-- Overlay for text & tech -->
-      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs  relative z-10 p-10">
+      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs relative z-10 p-20 rounded-xl">
         <div 
           id="hero-text"
           class="relative mx-auto z-20 text-center text-white px-6 py-8 bg-white/20 rounded-xl border-white/20 border backdrop-blur-lg max-w-3xl"
@@ -249,10 +291,8 @@
             Websites crafted for your growth
           </h1>
           <h2 class="text-xl sm:text-3xl mt-4 font-semibold">
-            Responsive, performant, and user-centric websites that put your
-            business at the center. 
-          </h2>
-          <div class="mt-4 flex flex-wrap justify-center gap-3">
+            Performant single-page sites or full ecommerce platforms, built to grow your business.
+          <div class="mt-4 flex flex-wrap justify-center gap-3 text-lg">
             <span
               class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
               >HTML</span
@@ -281,16 +321,16 @@
         </div>
 
         <!-- Buttons outside the overlay -->
-        <div class="mt-6 flex gap-4 z-20 relative justify-center align-center">
+        <div class="mt-10 flex gap-6 z-20 relative justify-center align-center">
           <!-- Full gradient button -->
          
-            <a href="#portfolio" aria-label="Click here to see my portfolio" class="rounded bg-gradient-to-l from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300" >View my work</a>
+            <a href="#portfolio" aria-label="Click here to see my portfolio" class="rounded bg-gradient-to-l text-xl text-center from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300" >View my work</a>
           
 
           <!-- Transparent gradient-border button -->
           <button
             id="hero-btn"
-            class="relative px-4 py-2 font-bold rounded-xl text-white bg-transparent border-2 border-transparent hover:scale-110 transition-transform duration-300 gradient-border"
+            class="relative px-4 py-2 font-bold rounded-xl text-xl text-white bg-transparent border-2 border-transparent hover:scale-110 transition-transform duration-300 gradient-border"
           aria-label="Click here to get in touch">
             Get in Touch
           </button>
@@ -328,28 +368,47 @@
     </a>
   </div>
 
+ <!-- Facebook -->
+
+  <div class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform">
+  <a href="https://www.facebook.com/profile.php?id=61581209611043" target="_blank" aria-label="Facebook profile of BuiltByAndy" class="text-white hover:text-cyan-400 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.658-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
+    </svg>
+  </a>
+</div>
+
+ <!-- Instagram -->
+<div class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform">
+  <a href="https://www.instagram.com/built_byandy/" target="_blank" aria-label="Instagram profile of BuiltByAndy" class="text-white hover:text-cyan-400 transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 512 512" fill="currentColor">
+      <path d="M349.33 69.33H162.67C104.11 69.33 69.33 104.11 69.33 162.67v186.66c0 58.56 34.78 93.34 93.34 93.34h186.66c58.56 0 93.34-34.78 93.34-93.34V162.67c0-58.56-34.78-93.34-93.34-93.34zM256 164a92 92 0 1 1 0 184 92 92 0 0 1 0-184zm93.33-49.33a21.33 21.33 0 1 1-42.66 0 21.33 21.33 0 0 1 42.66 0zM256 208a48 48 0 1 0 0 96 48 48 0 0 0 0-96z"/>
+    </svg>
+  </a>
+</div>
+
   <!-- Email -->
-  <div
-    class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
+<div
+  class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
+>
+  <a
+    href="mailto:contact@builtbyandy.com"
+    aria-label="Email address BuiltByAndy"
+    class="text-white hover:text-cyan-400 transition-colors"
   >
-    <a
-      href="mailto:contact@builtbyandy.com"   aria-label="Email address BuiltByAndy"
-      class="text-white hover:text-cyan-400 transition-colors"
-    >
-      <!-- Mail Heroicon (outline) -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8H3V8h18v8z"/>
-      </svg>
-    </a>
-  </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
+      <polyline points="2,4 12,13 22,4" />
+    </svg>
+  </a>
+</div>
 </div>
 
 
 
         <!-- Explore More -->
         <div
-          class="mt-6 flex flex-col items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer z-20 relative"
+          class="mt-10 flex flex-col items-center gap-2 text-gray-50 hover:text-white transition-colors cursor-pointer z-20 relative"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -366,20 +425,19 @@
             />
           </svg>
           <a
-            href="#new-services"
-            class="font-semibold transition duration-300 ease-in"
+            href="#pain-points"
+            class="font-semibold transition duration-300 ease-in text-xl"
             aria-label="Go to next Website Section - About me"
             >Explore more</a
           >
         </div>
       </div>
 </section>
-<!-- Services section -->
 
-
-<section id="new-services" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl mx-auto w-full overflow-hidden p-6 bg-gray-50 dark:bg-gray-900 dark:text-gray-50">
-  <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
-    Web development focused on your business needs
+<!-- Pain points section -->
+<section id="pain-points" data-aos="fade-up" data-aos-duration="1000" class="max-w-7xl  mx-auto relative  min-h-screen w-full overflow-hidden p-6 bg-gray-50 dark:bg-gray-900 dark:text-gray-50">
+  <h2 class="font-header text-2xl sm:text-4xl font-extrabold p-2 text-center mt-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+    Is your website helping your business grow?
   </h2>
   <!-- Theme Toggle button -->
    <div class="flex justify-end p-2">
@@ -405,18 +463,15 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     
     <!-- 1️⃣ First card (2x width) -->
-    <div data-aos="fade-right" data-aos-duration="2000" class="hover:shadow-lg col-span-1 md:col-span-2 bg-white dark:bg-gray-600 rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+    <div data-aos="fade-right" data-aos-duration="1000" class="hover:shadow-lg col-span-1 md:col-span-2 bg-white dark:bg-gray-600 rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
       <!-- text column -->
       <div class="w-full sm:w-1/2 min-w-[120px] p-6 flex flex-col justify-center">
           <span><i class="fa-regular fa-address-card text-2xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
-          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Template site packages</h3>
+          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Just starting and want an online presence?</h3>
           <p>
-            Kickstart your online presence with stylish, ready-to-go templates.
-            Fast, affordable, and tailored for your goals.
+            Launch your online presence quickly with a website that builds trust, showcases your brand, and converts visitors into customers.
           </p>
-          <p class="mt-2">
-            Up to 5 pages or sections, fully functional using pre-built templates. Ideal for small businesses who want a fast, reliable website.
-          </p>
+          
       </div>
 
       <!-- image column -->
@@ -429,48 +484,41 @@
     </div>
 
     <!-- 2️⃣ Second card (1x width) -->
-    <div data-aos="fade-left" data-aos-duration="2000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+    <div data-aos="fade-left" data-aos-duration="1000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
       <img src="images/coding-support.webp" alt="Ongoing care" class="w-full h-56 object-cover rounded-xl mb-4">
-       <span><i class="fa-regular fa-thumbs-up text-2xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+       <span><i class="fa-solid fa-gauge text-2xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
       <h3 class="font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
-        Ongoing care &amp; support
+        Is your current website holding your business back?
       </h3>
       <p>
-        Relax knowing your site is managed, updated, and ready for what’s next - help is just a message away.
+        Slow, outdated, or brochure-style sites don’t drive results. Your website should generate leads, reflect your brand, and accelerate business growth.
       </p>
-      <p class="mt-2">
-        Reliable hosting setup and management to keep your website fast, secure, and online 24/7.
-      </p>
+    
     </div>
 
     <!-- 3️⃣ Middle single card: image above text -->
-    <div data-aos="fade-right" data-aos-duration="2000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
+    <div data-aos="fade-right" data-aos-duration="1000" class="hover:shadow-lg bg-white dark:bg-gray-600 rounded-2xl shadow p-6 flex flex-col h-full">
       <img src="images/seo post.webp" alt="SEO that works" class="w-full h-56 object-cover rounded-xl mb-4">
-       <span><i class="fa-regular fa-file-lines text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+       <span><i class="fa-regular fa-pen-to-square text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
       <h3 class=" font-header text-xl font-bold mb-2  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
-       Ongoing Website Updates & Changes
+       Looking to sell online or add new features?
       </h3>
       <p>
-        Continuosly improve your brand and online visibility by adding new features and content that connect you with your ideal audience.
-      </p>
-      <p class="mt-2">
-        Regular updates, bug fixes, and feature additions for websites we created.
+      From ecommerce platforms to integrations, your website should expand with your business, increase revenue, and engage your customers.
       </p>
     </div>
 
     <!-- 4️⃣ Last double card: text left, image right -->
     
-<div data-aos="fade-left" data-aos-duration="2000"  class="hover:shadow-lg col-span-1 dark:bg-gray-600 md:col-span-2 bg-white rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
+<div data-aos="fade-left" data-aos-duration="1000"  class="hover:shadow-lg col-span-1 dark:bg-gray-600 md:col-span-2 bg-white rounded-2xl shadow overflow-hidden flex flex-row flex-wrap h-full">
       <!-- text column -->
       <div class="w-full sm:w-1/2 min-w-[120px] p-6 flex flex-col justify-center">
-          <span><i class="fa-regular fa-pen-to-square text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
-          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Custom Built Websites</h3>
+          <span><i class="fa-solid fa-arrow-up-right-dots text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+          <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Looking for a digital partner? </h3>
           <p>
-           Let’s craft something unique - clean code, from an original design, and develop a website that truly fits your brand.
+           Focus on running your business while we handle updates, security, performance, and ongoing website management, so your website consistently contributes to your growth.
           </p>
-          <p class="mt-2">
-           Complete custom development with modern technologies. Turn Figma or any other design package to a functional website. Integrate complex plugins/e-commerce technologies/customer login/etc.
-          </p>
+          
       </div>
 
       <!-- image column -->
@@ -484,34 +532,325 @@
   </div>
 </section>
 
- <section data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" id="testimonial" class="bg-gray-100 dark:bg-gray-900 max-w-full p-6 mx-auto overflow-hidden">
+<!-- What do I offer section -->
+<section id="services" class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
+  <h2 class="font-header p-2 text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+    My Services
+  </h2>
+  <p class="text-center text-lg">
+    I offer a full range of services to ensure optimal functionality and user experience, helping your business reach new heights.
+  </p>
 
-    
-    <!-- Testimonial card -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 max-w-full mx-auto text-center">
-       <!-- Quote icon -->
-    <span><i class="fa-solid fa-quote-left text-3xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
-      <p class="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed">
-       Working with Andy was such a smooth experience. Our website looks fantastic, loads quickly, and updating it is really easy. She listened to our needs at every step and genuinely cares about helping small businesses succeed. I’d happily recommend Andy to anyone who wants a reliable and committed developer.
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+    <!-- Card 1: Landing Page -->
+    <div data-aos="fade-up" data-aos-duration="1000" class="bg-white dark:bg-gray-800 rounded-xl shadow p-6 flex flex-col transition border border-transparent hover:border-cyan-500 focus:border-cyan-500">
+      <h3 class="text-xl sm:text-2xl font-bold mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+        Landing Page
+      </h3>
+      <p>
+        Your first impression matters. Launch a striking landing page that reflects your branding, engages visitors, and converts them into customers.
       </p>
-<span><i class="fa-solid fa-quote-right text-3xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent""></i></span>
-      <!-- Client info -->
-      <div class="mt-6">
-        <p class="font-bold text-gray-900 dark:text-gray-50 text-xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Chrystal Executive Travel</p>
-      
+    </div>
+
+    <!-- Card 2: Business Website -->
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 flex flex-col transition border border-transparent hover:border-cyan-500 focus:border-cyan-500">
+      <h3 class="text-xl sm:text-2xl font-bold mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+        Business Website
+      </h3>
+      <p >
+        A professional website ensures your brand is remembered. Incorporate branding and social media to boost engagement and elevate your digital presence.
+      </p>
+    </div>
+
+    <!-- Card 3: Custom Integration -->
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 flex flex-col transition border border-transparent hover:border-cyan-500 focus:border-cyan-500">
+      <h3 class="text-xl sm:text-2xl font-bold mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+        Custom Integration
+      </h3>
+      <p>
+        Need more than a static site? We develop interactive web applications and custom integrations tailored to your business needs.
+      </p>
+    </div>
+
+    <!-- Card 4: Care Plan -->
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="bg-white dark:bg-gray-800 rounded-2xl shadow p-6 flex flex-col transition border border-transparent hover:border-cyan-500 focus:border-cyan-500">
+      <h3 class="text-xl sm:text-2xl font-bold mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+        Care Plan
+      </h3>
+      <p>
+        Keep your website performing at its best. We handle updates, security, and ongoing management so your digital presence stays reliable and professional.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Portfolio section -->
+<section id="portfolio" class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
+ 
+  <h2 class="font-header p-2 text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+    My Latest Work
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Executive Travel Card -->
+    <div  class="flip-card w-full min-h-[28rem]">
+      <div class="flip-inner relative w-full h-full">
+
+        <!-- Front -->
+        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
+          <a href="https://chrystalexecutivetravel.co.uk/" target="_blank" rel="noopener">
+            <img src="images/exectravel.png" alt="Executive Travel Website" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold mb-2">Executive Travel Website</h3>
+            <p class="mb-4">A sleek, modern site for a premium travel service.</p>
+            <p class="mb-4">Custom HTML/CSS/JS/Tailwind build. Hosting and management included.</p>
+            <a href="https://chrystalexecutivetravel.co.uk/"
+               class="mt-auto inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition">
+              Visit Site
+            </a>
+          </div>
+        </div>
+
+        <!-- Back -->
+        <div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
+  
+  <!-- Image at the top -->
+  <a href="https://chrystalexecutivetravel.co.uk/" target="_blank" rel="noopener">
+    <img src="images/chrystal_audit.png" alt="Executive Travel Website" class="w-full h-48 object-cover">
+  </a>
+  
+  <!-- Text content -->
+  <div class="p-5 flex flex-col flex-1">
+    <h3 class="text-2xl font-bold mb-2">Landing Page</h3>
+    <p class="mb-4">Brochure website delivered in 3 days, custom coded with no dependency on templates.</p>
+    <p class="mb-4">Responsive design, fast performance, and tailored features.</p>
+
+
+  </div>
+</div>
+
       </div>
     </div>
 
-</section>
-    
+    <!-- Cosmetic Dentistry Card -->
+    <div  class="flip-card w-full min-h-[28rem]">
+      <div class="flip-inner relative w-full h-full">
 
-    <!-- CTA section -->
-    <section id="cta" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-full bg-white dark:bg-gray-700 w-full mx-auto text-center text-gray-50">
-      <div
-        class="bg-gradient-to-l p-10 from-cyan-500 to-purple-500 rounded text-grey-50 text-center  text-center flex flex-col justify-center items-center"
+        <!-- Front -->
+        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
+          <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/smileplanner.png" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold mb-2">Cosmetic Dentistry Website</h3>
+            <p class="mb-4">A clean, modern site for a dental agency service.</p>
+            <p class="mb-4">Designed and developed with HTML, CSS, JavaScript and Tailwind.</p>
+            <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener" class="mt-auto inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition">
+              Visit Site
+            </a>
+          </div>
+        </div>
+
+      <!-- Back -->
+<div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
+  
+  <!-- Image at the top -->
+  <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/smileplanner audit.png" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
+  </a>
+  
+  <!-- Text content -->
+  <div class="p-5 flex flex-col flex-1">
+    <h3 class="text-2xl font-bold mb-2">Landing Page</h3>
+    <p class="mb-4">Brochure website delivered in 4 days. Custom coded based on owner's vision. </p>
+    <p class="mb-4">Bespoke theme and layout with optimized performance.</p>
+
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Styled Calculator Card -->
+    <div  class="flip-card w-full min-h-[28rem]">
+      <div class="flip-inner relative w-full h-full">
+
+        <!-- Front -->
+        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-2xl overflow-hidden">
+          <a href="https://styled-calculator.netlify.app/" target="_blank" rel="noopener" aria-label="Styled Calculator App">
+            <img src="images/calculator.png" alt="Styled Calculator Application" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold mb-2">Styled Calculator</h3>
+            <p class="mb-4">An interactive calculator with custom styling and smooth animations.</p>
+            <p class="mb-4">Application created with HTML, CSS and JavaScript.</p>
+            <a href="https://styled-calculator.netlify.app/" target="_blank" rel="noopener" class="mt-auto inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition">
+              View App
+            </a>
+          </div>
+        </div>
+
+       <!-- Back -->
+<div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col items-center justify-center rounded-2xl overflow-hidden">
+  
+  
+  <!-- Text content -->
+  <div class="p-5">
+    <h3 class="text-2xl font-bold mb-2">Styled Calculator</h3>
+    <p class="mb-4">Interactive web application cleanly coded and styled.</p>
+    <p class="mb-4">Development project part of my certification journey.</p>
+  </div>
+</div>
+
+     </div>
+     </div>
+     </div>
+</section>
+
+
+<section id="testimonial" class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-100 z-10">
+  
+  <!-- Parallax code background -->
+  <!-- Parallax container -->
+  <div id="code-container" class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <pre id="code-bg" class="text-cyan-400 font-mono text-lg leading-snug whitespace-pre-wrap"></pre>
+  </div>
+
+  <!-- Testimonial card -->
+  <div data-aos="fade-up" data-aos-duration="1000"
+       class="relative z-30 text-gray-800 bg-white/80 dark:bg-gray-900/70 dark:text-gray-50 rounded-2xl shadow-xl p-6 max-w-3xl mx-auto text-center">
+    
+    <span><i class="fa-solid fa-quote-left text-3xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+    
+    <p class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
+      Working with Andy was such a smooth experience. Our website looks fantastic, loads quickly, and updating it is really easy. She listened to our needs at every step and genuinely cares about helping small businesses succeed. I’d happily recommend Andy to anyone who wants a reliable and committed developer.
+    </p>
+    
+    <span><i class="fa-solid fa-quote-right text-3xl mb-3 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
+    
+    <div class="mt-6">
+      <p class="font-bold bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent text-xl mb-3">Chrystal Executive Travel</p>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Services section -->
+<section id="prices" class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gradient-to-l from-cyan-500 to-purple-500 z-10">
+  <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-12">
+
+    <!-- Transition Question -->
+    <h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-bold text-gray-50 leading-tight">
+      Ready to turn your website into a powerful growth engine?
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-50 max-w-4xl">
+      No matter where you are in your online journey, I offer tailored packages designed to generate leads, boost revenue, and scale with your business.
+    </p>
+
+    <!-- Cards Container -->
+    <div id="packageStack" class="relative mx-auto w-full flex flex-col justify-between md:flex-row items-stretch gap-4 lg:gap-0">
+      
+      <!-- Card 1: Landing Page -->
+      <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full cursor-pointer transform transition-transform duration-300 z-10 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Landing Page Package: Fast website for new businesses">
+        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-l from-cyan-500 to-cyan-700 bg-clip-text text-transparent md:text-3xl">Landing Page</h3>
+        <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
+          Launch quickly with a <strong>website built for your brand, message, and business goals</strong>. Get live in days with all essentials to engage your customers.
+        </p>
+        <hr>
+        <ul class="text-gray-600 dark:text-gray-50 mb-4 space-y-1 text-left">
+          <li>✔ Up to 5 pages or sections</li>
+          <li>✔ Responsive, mobile-friendly design</li>
+          <li>✔ Contact form to capture leads</li>
+          <li>✔ Basic SEO setup for search visibility</li>
+          <li>✔ Google Analytics integration</li>
+          <li>✔Performance optimized for fast load times</li>
+        </ul>
+        <div class="mt-auto">
+        <hr>
+        <p class="text-3xl font-bold mb-4"><span class="text-lg">From </span>£295</p>
+        <p class="text-lg mb-2 text-left"><strong>Best for:</strong> Start-ups businesses looking to establish their online presence</p>
+<p class="font-semibold mb-2">Delivery in 1 week</p>
+        <button class="w-full py-3 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-semibold rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Get started with Landing Page package" id="get-started">Get Started</button>
+      
+      </div></div>
+
+      <!-- Card 2: Business Website -->
+      <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full cursor-pointer transform transition-transform duration-300 z-20 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Business Website Package: Refresh or upgrade your website">
+        <h3 class="text-2xl font-bold mb-4 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent md:text-3xl">Business Website</h3>
+        <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
+          Refresh your website or replace a slow, outdated template. Build a site that <strong>generates leads, showcases your brand, and supports business growth</strong>.
+        </p>
+        <hr>
+        <ul class="text-gray-600 dark:text-gray-50 mb-4 space-y-1 text-left">
+          <li>✔ Up to 8 custom pages</li>
+          <li>✔ Responsive, branded design tailored to your business</li>
+          <li>✔ Lead capture forms to convert visitors</li>
+          <li>✔ SEO & analytics setup for visibility and insights</li>
+          <li>✔ Blog or news section to engage customers</li>
+        </ul>
+        <div class="mt-auto">
+        <hr>
+        <p class="text-3xl font-bold mb-4"><span class="text-lg">From </span> £595</p>
+        <p class="text-lg mb-2 text-left"><strong>Best for:</strong> Businesses looking to grow or upgrade their online presence</p>
+<p class="font-semibold mb-2">Delivery in 2 weeks</p>
+        <button class="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Get started with Business Website package" id="get-growing">Get Growing</button>
+      </div>
+      </div>
+
+      <!-- Card 3: Custom Integration -->
+      <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full  cursor-pointer transform transition-transform duration-300 z-30 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Custom Integration Package: Ecommerce and advanced features">
+        <h3 class="text-2xl font-bold mb-4 bg-gradient-to-l from-purple-500 to-purple-700 bg-clip-text text-transparent md:text-3xl">Custom Integration</h3>
+        <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
+          Build a fully-featured website or online store that <strong>scales your business</strong>. Add advanced features, integrate systems, and drive revenue as your site grows.
+        </p>
+       
+        <hr>
+        <ul class="text-gray-600 dark:text-gray-50 mb-4 space-y-1 text-left">
+          <li>✔ Unlimited pages & sections</li>
+          <li>✔ Ecommerce with payment gateways & EPOS integration</li>
+          <li>✔ Custom forms & interactive features</li>
+          <li>✔ Advanced SEO and performance optimization</li>
+          <li>✔ CMS or WordPress integration for full control</li>
+        </ul>
+        <div class="mt-auto">
+        <hr>
+        <p class="text-3xl font-bold mb-4"><span class="text-lg">From </span> £1,095</p>
+        <p class="text-lg mb-2 text-left"><strong>Best for:</strong> Growing businesses that need a scalable, feature-rich website</p>
+  <p class="font-semibold mb-2 ">Delivery in 3+ weeks</p>
+        <button class="w-full py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Get started with Custom Integration package" id="get-selling">Get Selling</button>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- Hosting & Management -->
+    <div class="mt-12 text-center text-gray-50 shadow-lg p-6 rounded-xl">
+      <h3 class="text-2xl font-semibold mb-4">Care Plan</h3>
+      <p class="text-xl mb-4">Keep your website secure, fast, and up-to-date. Plans start at <strong>£35/month</strong>.</p>
+      <ul class="space-y-1">
+        <li>✔ Regular updates & backups</li>
+        <li>✔ Performance monitoring</li>
+        <li>✔ Security monitoring</li>
+        <li>✔ Priority support</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA section -->
+    <section id="cta"  class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gradient-to-l from-cyan-500 to-purple-500 z-10">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+        class="bg-gradient-to-l p-10 from-cyan-500 to-purple-500 rounded text-grey-50 text-center flex flex-col justify-center items-center"
       >
         <h2
-          class="text-3xl sm:text-5xl font-bold text-gray-50 mt-5 drop-shadow-lg"
+          class="font-header text-3xl sm:text-5xl font-bold text-gray-50 mt-5 drop-shadow-lg"
         >
           Let's build something amazing!
         </h2>
@@ -520,167 +859,58 @@
         </p>
 
         <!-- Centering div for 3 sections -->
-        <div class="flex justify-center flex-wrap gap-3 mb-5">
+        <div class="flex justify-center flex-wrap gap-2 mb-5">
           <p
-            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[14rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-location-dot mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
             ></i>
-            <span class="text-center sm:text-left">Working Remote</span>
+            <span class="text-center sm:text-center">Working Remote</span>
           </p>
           <p
-            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[14rem] min-h-[3rem]"
           >
             <i class="fa-solid fa-clock mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"></i>
-            <span class="text-center sm:text-left">Quick turnaround</span>
+            <span class="text-center sm:text-center">Quick turnaround</span>
           </p>
           <p
-            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[12rem] min-h-[3rem]"
+            class="flex flex-col items-center justify-center bg-white/20 p-2 text-white rounded border border-white/10 backdrop-blur-xs shadow-sm flex-1 min-w-[14rem] min-h-[3rem]"
           >
             <i
               class="fa-solid fa-handshake mb-1 sm:mb-0 sm:mr-2 flex-shrink-0"
             ></i>
-            <span class="text-center sm:text-left">Collaborative approach</span>
+            <span class="text-center sm:text-center">Collaborative approach</span>
           </p>
         </div>
-        <button
-          id="cta-btn"
-          class="text-xl font-bold px-7 py-3 rounded-full bg-white/50 backdrop-blur-lg text-white shadow-2xl animate-pulse hover:animate-none hover:scale-110 transition duration-300"
-        >
-          Get in touch
-        </button>
+      <style>
+  @keyframes pulse-shadow {
+    0%, 100% { box-shadow: 0 0 30px rgba(255,255,255,0.3); }
+    50% { box-shadow: 0 0 60px rgba(255,255,255,0.8); }
+  }
+
+  .animate-shadow-pulse {
+    animation: pulse-shadow 2s infinite;
+  }
+</style>
+
+<button
+  id="cta-btn"
+  class="text-xl font-bold mt-5 px-7 py-3 rounded-full bg-white/20 backdrop-blur-lg text-white shadow-2xl animate-shadow-pulse hover:scale-110 transition-transform duration-300"
+>
+  Get in touch
+</button>
       </div>
     </section>
 
-    <!-- Portfolio section -->
-    <section data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
-      id="portfolio"
-      class="max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
-    >
-      <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">My Latest Work</h2>
 
-      <!-- Cards grid -->
-      <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card -->
-        <div
-          class="bg-white flex flex-col  dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <a
-            href="https://chrystalexecutivetravel.co.uk/"
-            target="_blank"
-            rel="noopener" aria-label="View the Executive Travel Website project by BuiltByAndy"
-          >
-            <img
-              src="images/exectravel.png"
-              alt="Screenshot of Executive Travel website project"
-              class="w-full h-48 object-cover"
-              loading="lazy"
-            />
-          </a>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-xl font-semibold mb-2">Executive Travel Website</h3>
-            <p class="mb-4">
-              A sleek, modern site for a premium travel service.
-            </p>
-            <p class=" mb-4">
-              Custom HTML/CSS/JS/Tailwind build. Hosting and management
-              included.
-            </p>
-            <a
-              href="https://chrystalexecutivetravel.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mt-auto w-max inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
-              aria-label="View the Executive Travel Website project by BuiltByAndy"
-            >
-              Visit Site
-            </a>
-          </div>
-        </div>
-
-        <!-- Repeat for other projects -->
-        <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"
-          class="bg-white flex flex-col dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <a
-            href="https://smileplanneruk-turkey.com/"
-            target="_blank"
-            rel="noopener noreferrer" aria-label="View the Dental Agency Website project by BuiltByAndy"
-          >
-            <img
-              src="images\smileplanner.png"
-              alt="Cosmetic Dentistry Website preview"
-              class="w-full h-48 object-cover"
-              loading="lazy"
-            />
-          </a>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-xl font-semibold mb-2">
-              Cosmetic Dentistry Website
-            </h3>
-            <p class="mb-4">
-              A clean, modern site for a dental agency service.
-            </p>
-            <p class=" mb-4">
-              Designed and developed with HTML, CSS, JavaScript and Tailwind.
-            </p>
-            <a
-              href="https://smileplanneruk-turkey.com/"
-              target="_blank"
-              rel="noopener"
-              class="inline-block mt-auto w-max px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
-              aria-label="View the Dental Agency Website project by BuiltByAndy"
-            >
-              Visit Site
-            </a>
-          </div>
-        </div>
-
-        <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300"
-          class="bg-white flex flex-col dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <a
-            href="https://styled-calculator.netlify.app/"
-            target="_blank"
-            rel="noopener" aria-label="View the Styled Calculator App project by BuiltByAndy"
-          >
-            <img
-              src="images\calculator.png"
-              alt="Preview of Styled Calculator application"
-              class="w-full h-48 object-cover"
-              loading="lazy" 
-            />
-          </a>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-xl font-semibold mb-2">Styled Calculator</h3>
-            <p class="mb-4">
-              An interactive calculator with custom styling and smooth
-              animations.
-            </p>
-            <p class=" mb-4">
-              Application created with HTML, CSS and JavaScript.
-            </p>
-            <a
-              href="https://styled-calculator.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block mt-auto w-max px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition"
-              aria-label="View the Styled Calculator App project by BuiltByAndy"
-            >
-              View App
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Form section -->
     <section
       data-aos-duration="3000"
       data-aos="zoom-in"
       id="form"
-      class="text-gray-900 fixed inset-0 hidden z-10 flex items-center justify-center bg-white/40
+      class="text-gray-900 fixed inset-0 hidden z-20 flex items-center justify-center bg-white/40
      overflow-y-auto max-w-screen w-screen"
     >
       <div
@@ -768,11 +998,11 @@
               required
             >
               <option value="">-- Select a Service --</option>
-              <option value="Standard template Website">
-                Standard Template Website
+              <option value="Landing Page">
+                Landing Page
               </option>
-              <option value="Custom Website">Custom Website</option>
-              <option value="Design services">Convert design to code</option>
+              <option value="Business Website">Business Website</option>
+              <option value="Custom integration">Custom Integration</option>
               <option value="I don't know, need to discuss">
                 I don't know, I need to discuss
               </option>
@@ -819,14 +1049,15 @@
       </div>
     </section>
 
-<section id="faq" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl mx-auto w-full p-10 bg-white">
+<section id="faq" class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
+  <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" >
   <!-- Section heading -->
   <h2 class="font-header text-2xl sm:text-3xl font-extrabold text-center my-10
              bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">
     Your questions answered simply
   </h2>
 
-  <p class="font-header text-md sm:text-xl md:text-2xl font-bold text-center mb-8">
+  <p class="font-header dark:text-gray-700 text-md sm:text-xl md:text-2xl font-bold text-center mb-8">
     Wondering how we can work together? Here are the answers to the most common questions I get from business owners — let's make your website journey easy and enjoyable.
   </p>
 
@@ -892,18 +1123,18 @@
         Reach out with your ideas or requirements. We’ll discuss your goals, map out a plan, and start the project. I’ll guide you every step of the way.
       </p>
     </div>
-
+</div>
   </div>
 </section>
 
 
 
     <!-- About Me section -->
-    <section id="about" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-7xl mx-auto w-full overflow-hidden p-6 text-center mx-auto">
-     
+    <section id="about"  class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
+     <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
       <!-- Section start -->
       <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">About Me</h2>
-      <p class="text-xl font-semibold mt-5">
+      <p class="text-xl text-center font-semibold mt-5">
         I'm a passionate Frontend Developer who loves combining modern web
         technologies with thoughtful design, and brings brands to life online in
         a way that is both engaging and functional.
@@ -913,8 +1144,8 @@
         class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center overflow-hidden"
       >
         <!-- text column -->
-        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-          <h3 class="text-xl font-semibold mt-5 mb-5">My Journey</h3>
+        <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+          <h3 class="text-xl text-center font-semibold mt-5 mb-5">My Journey</h3>
           <p class="text-left mt-2 text-lg">
             My journey into frontend development started with curiosity about
             how websites work. After 13+ years in IT, helping organizations
@@ -1003,15 +1234,16 @@
             </p>
           </div>
         </div>
+        </div>
       </div>
     </section>
 
 
     <!-- Footer section -->
-    <footer data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
-      class="relative max-w-7xl mx-auto w-full overflow-hidden p-6 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
-    >
-      <div class=" sm:pt-16 lg:pt-24">
+    <footer
+      class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
+    
+      <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class=" sm:pt-16 lg:pt-24">
         <div
           class="px-4 mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
         >
@@ -1025,23 +1257,31 @@
                 <a
                   href="#new-services"
                   title="services-section"
-                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 hover:scale-110"
                   >Services</a
                 >
               </li>
               <li>
                 <a
                   href="#portfolio"
-                  title="portfolio-section"
-                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  title="potfolio-section"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 hover:scale-110"
                   >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#prices"
+                  title="prices-section"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 hover:scale-110"
+                  >Prices</a
                 >
               </li>
               <li>
                 <a
                   href="#faq"
                   title="faq-section"
-                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 hover:scale-110"
                   >FAQ's</a
                 >
               </li>
@@ -1049,7 +1289,7 @@
                 <a
                   href="#about"
                   title="about-section"
-                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 focus:scale-115"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-300 hover:scale-110"
                   >About</a
                 >
               </li>
@@ -1057,7 +1297,7 @@
                 <a
                   href="#cta"
                   title="contact-section"
-                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-400 hover:scale-125"
+                  class="font-semibold text-lg transition-all duration-200 hover:text-cyan-400 hover:scale-110"
                   >Contact</a
                 >
               </li>
@@ -1066,13 +1306,13 @@
 
           <!-- Social Links -->
           <div
-            class="flex flex-col items-center justify-between bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
+            class="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
           >
             <h2 class="font-semibold tracking-widest text-xl uppercase text-center">
-              Connect with us / Follow us
+              Connect / Follow 
             </h2>
             <div
-              class="flex justify-center items-center text-4xl space-x-8 mt-6"
+              class="flex justify-center items-center text-4xl space-x-2 mt-6"
             >
               <a
                 href="https://github.com/AndyWebDev"
@@ -1093,6 +1333,16 @@
                   class="fa-brands fa-linkedin m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
+               <a
+                href="https://www.instagram.com/built_byandy/"
+                target="_blank"
+                id="whatsapp-btn"
+                class="hover:scale-110 transition-transform" aria-label="Connect on Instagram with BuiltByAndy"
+              >
+                <i
+                  class="fa-brands fa-instagram text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                ></i>
+              </a>
               <a
                 href="https://wa.me/447833200868?text=Hello%20I%20would%20like%20to%20discuss%20a%20project"
                 target="_blank"
@@ -1100,7 +1350,7 @@
                 class="hover:scale-110 transition-transform" aria-label="Connect on WhatsApp with BuiltByAndy"
               >
                 <i
-                  class="fa-brands fa-whatsapp text-4xl m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-whatsapp text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i>
               </a>
             </div>
@@ -1157,7 +1407,7 @@
             </p>
             <button
               id="accept-cookies"
-              class="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 text-black font-bold px-4 py-2 rounded hover:scale-125 transition"
+              class="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 font-bold px-4 py-2 rounded hover:scale-125 transition"
             >
               Accept
             </button>
@@ -1165,12 +1415,23 @@
         </div>
       </div>
     </footer>
+ 
     <script>
   AOS.init({
     duration: 800,
     easing: 'ease-in-out',
     once: true,
   });
+
+ // Animate code lines sequentially
+  const lines = document.querySelectorAll('#animated-code .line');
+  let index = 0;
+  function highlightLine() {
+    lines.forEach((line) => line.classList.remove('active'));
+    lines[index].classList.add('active');
+    index = (index + 1) % lines.length;
+  }
+  setInterval(highlightLine, 1000);
 </script>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

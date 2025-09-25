@@ -62,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Buttons that open the form
   document
-    .querySelectorAll("#hero-btn, #cta-btn, #contact-btn, #contact-btn-mobile")
+    .querySelectorAll(
+      "#hero-btn, #cta-btn, #contact-btn, #contact-btn-mobile, #get-started, #get-growing, #get-selling"
+    )
     .forEach((btn) => btn.addEventListener("click", openModal));
 
   closeBtn.addEventListener("click", () => formDiv.classList.add("hidden"));
@@ -129,33 +131,67 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.add("hidden");
   });
 
-  //====Bar filling====
+  //====Service shuffle cards====
+  const cards = document.querySelectorAll(".package-card");
 
-  const bars = document.querySelectorAll(".animate-progress");
-
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          const target = bar.dataset.width;
-
-          // Force a reflow so the browser registers width:0 before setting the target
-          bar.style.width = "0";
-          void bar.offsetWidth; // <-- key line
-
-          // Small delay ensures the 0-width paint happens before we set the real width
-          setTimeout(() => {
-            bar.style.width = target;
-          }, 50);
-
-          obs.unobserve(bar);
-        }
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      // Reset all cards
+      cards.forEach((c, i) => {
+        c.style.zIndex = 10 + i;
+        c.style.transform = "";
       });
-    },
-    { threshold: 0.5 }
-  );
 
-  bars.forEach((bar) => observer.observe(bar));
+      // Bring clicked card to front with scale animation
+      card.style.zIndex = 50;
+      card.style.transform = "scale(1.05)";
+    });
+
+    // Keyboard accessibility: focus brings card to front
+    card.addEventListener("focus", () => {
+      cards.forEach((c, i) => {
+        c.style.zIndex = 10 + i;
+        c.style.transform = "";
+      });
+      card.style.zIndex = 50;
+      card.style.transform = "scale(1.05)";
+    });
+  });
+
+  // ==== Code Background Typing Animation ====
+  const codeBg = document.getElementById("code-bg");
+
+  const codeLines = [
+    "function buildWebsite() {",
+    "  const client = 'Small or Medium Business';",
+    "  const goal = 'Grow & scale';",
+    "  const tools = ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'WordPress', 'React', 'Wix', 'Webflow'];",
+    "  console.log(`Building site for ${client} using ${tools.join(', ')}`);",
+    "// SEO optimized, responsive on all devices and mobile friendly, performance focused and tailored for accessibility",
+    "}",
+  ];
+
+  // Build a long single string of all lines joined by \n, repeated many times
+  const longCode = Array(50).fill(codeLines.join("\n")).join("\n\n");
+
+  // Typing variables
+  let charIndex = 0;
+
+  function typeForever() {
+    codeBg.textContent = longCode.slice(0, charIndex);
+    charIndex++;
+
+    // If we've reached the bottom of the container, restart immediately
+    if (
+      charIndex >= longCode.length ||
+      codeBg.scrollHeight > codeBg.offsetHeight * 1.1
+    ) {
+      codeBg.textContent = ""; // clear instantly
+      charIndex = 0; // start again from top
+    }
+
+    setTimeout(typeForever, 20); // adjust typing speed here
+  }
+
+  typeForever();
 });
-
