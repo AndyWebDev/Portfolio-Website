@@ -34,13 +34,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://builtbyandy.com/" />
 
-    <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
     <!-- AOS Animation-->
   <!-- AOS CSS -->
 <link rel="stylesheet" href="/public/vendor/aos.css">
 
-<!-- AOS JS -->
-<script src="/public/vendor/aos.js"></script>
 
   <!-- Font Awesome Free CSS -->
   <link
@@ -49,7 +47,7 @@
     />
 
     <!-- TailwindCSS theme -->
-    <link rel="stylesheet" href="public/tailwind.css">
+  <link rel="stylesheet" href="public/tailwind.css">
 
     <link
       rel="icon"
@@ -138,14 +136,15 @@
         </nav>
 
         <!-- Hamburger for Mobile -->
-        <div
-          class="md:hidden text-gray-100 text-2xl cursor-pointer px-2"
+        <button
+          class="md:hidden text-gray-100 text-2xl cursor-pointer px-4"
           id="menu-toggle"
-        aria-label="Menu-icon - home">
+            type="button"
+       aria-label="Open main menu">
           <i
             class="fas fa-home bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
           ></i>
-        </div>
+      </button>
       </div>
 
       <!-- Mobile Menu -->
@@ -209,7 +208,7 @@
     <!-- Hero section -->
     <section
       id="home"
-      class="sticky top-0 mx-auto h-screen z-0 flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
+      class="sticky top-0 mx-auto min-h-screen sm:h-screen z-0 flex flex-col items-center justify-center border-b-2 border-t-2 border-cyan-300 overflow-hidden"
     >
       <!-- Background image -->
       <img
@@ -280,19 +279,20 @@
       </div>
 
       <!-- Overlay for text & tech -->
-      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs relative z-10 p-20 rounded-xl">
+      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs relative z-10 
++             p-6 sm:p-10 md:p-16 rounded-xl w-full max-w-[90vw] sm:max-w-2xl md:max-w-3xl pb-12 sm:pb-24">
         <div 
           id="hero-text"
           class="relative mx-auto z-20 text-center text-white px-6 py-8 bg-white/20 rounded-xl border-white/20 border backdrop-blur-lg max-w-3xl"
         >
           <h1 
-            class="font-header text-4xl sm:text-7xl py-2 mb-4 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
+            class="font-header text-3xl sm:text-7xl py-2 mb-4 font-bold bg-gradient-to-r from-cyan-200 via-blue-400 to-purple-700 bg-clip-text text-transparent drop-shadow-[2px_2px_4px_rgba(0,0,0,0.6)]"
           >
             Websites crafted for your growth
           </h1>
           <h2 class="text-xl sm:text-3xl mt-4 font-semibold">
             Performant single-page sites or full ecommerce platforms, built to grow your business.
-          <div class="mt-4 flex flex-wrap justify-center gap-3 text-lg">
+          <div class="mt-4 flex flex-wrap justify-center gap-3 text-sm sm:text-lg">
             <span
               class="px-3 py-1 border-1 border-white/20 rounded-xl text-white bg-white/20 font-semibold"
               >HTML</span
@@ -324,20 +324,20 @@
         <div class="mt-10 flex gap-6 z-20 relative justify-center align-center">
           <!-- Full gradient button -->
          
-            <a href="#portfolio" aria-label="Click here to see my portfolio" class="rounded bg-gradient-to-l text-xl text-center from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300" >View my work</a>
+            <a href="#portfolio" aria-label="Click here to see my portfolio" class="rounded bg-gradient-to-l text-lg sm:text-xl text-center from-cyan-500 to-purple-600 text-white font-bold px-4 py-2 hover:scale-110 transition-transform duration-300" >View my work</a>
           
 
           <!-- Transparent gradient-border button -->
           <button
             id="hero-btn"
-            class="relative px-4 py-2 font-bold rounded-xl text-xl text-white bg-transparent border-2 border-transparent hover:scale-110 transition-transform duration-300 gradient-border"
+            class="relative px-4 py-2 font-bold rounded-xl text-lg sm:text-xl text-white bg-transparent border-2 border-transparent hover:scale-110 transition-transform duration-300 gradient-border"
           aria-label="Click here to get in touch">
             Get in Touch
           </button>
         </div>
 
 <!-- Social Icons outside overlay -->
-<div class="mt-6 flex gap-6 z-20 relative justify-center items-center">
+<div class="mt-6 sm:mt-16 flex flex-row gap-4 sm:gap-6 z-20 relative justify-center items-center">
   <!-- GitHub -->
   <div
     class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform"
@@ -347,7 +347,7 @@
       class="text-white hover:text-cyan-400 transition-colors"
     >
       <!-- GitHub Heroicon (outline) -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 sm:w-8" viewBox="0 0 24 24" fill="currentColor">
         <path fill-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.76-1.604-2.665-.304-5.466-1.332-5.466-5.932 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404 11.5 11.5 0 013.003.404c2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.242 2.873.118 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.804 5.625-5.475 5.921.43.37.814 1.102.814 2.222 0 1.604-.015 2.896-.015 3.287 0 .32.216.694.825.576C20.565 21.796 24 17.303 24 12c0-6.628-5.373-12-12-12z" clip-rule="evenodd"/>
       </svg>
     </a>
@@ -362,30 +362,12 @@
       class="text-white hover:text-cyan-400 transition-colors" target="_blank"
     >
       <!-- LinkedIn Heroicon (solid) -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 448 512">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 sm:w-8" fill="currentColor" viewBox="0 0 448 512">
         <path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.64 53.64 0 1153.64-53.64 53.61 53.61 0 01-53.64 53.64zm394.24 340h-92.68V302.4c0-34.7-12.38-58.4-43.34-58.4-23.64 0-37.72 15.89-43.88 31.22-2.26 5.5-2.84 13.12-2.84 20.76V448h-92.68s1.24-259.2 0-286.1h92.68v40.54c-.18.29-.44.61-.61.91h.61v-.91c12.33-19 34.43-46.13 83.74-46.13 61.18 0 107.08 39.87 107.08 125.44V448z"/>
       </svg>
     </a>
   </div>
 
- <!-- Facebook -->
-
-  <div class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform">
-  <a href="https://www.facebook.com/profile.php?id=61581209611043" target="_blank" aria-label="Facebook profile of BuiltByAndy" class="text-white hover:text-cyan-400 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.658-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
-    </svg>
-  </a>
-</div>
-
- <!-- Instagram -->
-<div class="bg-white/20 py-2 px-4 rounded border-2 border-white/20 backdrop-blur-md hover:scale-110 transition-transform">
-  <a href="https://www.instagram.com/built_byandy/" target="_blank" aria-label="Instagram profile of BuiltByAndy" class="text-white hover:text-cyan-400 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 512 512" fill="currentColor">
-      <path d="M349.33 69.33H162.67C104.11 69.33 69.33 104.11 69.33 162.67v186.66c0 58.56 34.78 93.34 93.34 93.34h186.66c58.56 0 93.34-34.78 93.34-93.34V162.67c0-58.56-34.78-93.34-93.34-93.34zM256 164a92 92 0 1 1 0 184 92 92 0 0 1 0-184zm93.33-49.33a21.33 21.33 0 1 1-42.66 0 21.33 21.33 0 0 1 42.66 0zM256 208a48 48 0 1 0 0 96 48 48 0 0 0 0-96z"/>
-    </svg>
-  </a>
-</div>
 
   <!-- Email -->
 <div
@@ -396,7 +378,7 @@
     aria-label="Email address BuiltByAndy"
     class="text-white hover:text-cyan-400 transition-colors"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 sm:w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
       <polyline points="2,4 12,13 22,4" />
     </svg>
@@ -408,7 +390,7 @@
 
         <!-- Explore More -->
         <div
-          class="mt-10 flex flex-col items-center gap-2 text-gray-50 hover:text-white transition-colors cursor-pointer z-20 relative"
+          class="mt-6 sm:mt-16 flex flex-col items-center gap-2 text-gray-50 hover:text-white transition-colors cursor-pointer z-20 relative"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -516,7 +498,7 @@
           <span><i class="fa-solid fa-arrow-up-right-dots text-2xl mb-3  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"></i></span>
           <h3 class="font-header text-xl font-bold mb-4  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">Looking for a digital partner? </h3>
           <p>
-           Focus on running your business while we handle updates, security, performance, and ongoing website management, so your website consistently contributes to your growth.
+           Focus on running your business while updates, security, performance, and ongoing website management is handled for you. This way your website consistently contributes to your growth.
           </p>
           
       </div>
@@ -570,7 +552,7 @@
         Custom Integration
       </h3>
       <p>
-        Need more than a static site? We develop interactive web applications and custom integrations tailored to your business needs.
+        Need more than a static site? I develop interactive web applications and custom integrations tailored to your business needs.
       </p>
     </div>
 
@@ -580,7 +562,7 @@
         Care Plan
       </h3>
       <p>
-        Keep your website performing at its best. We handle updates, security, and ongoing management so your digital presence stays reliable and professional.
+        Keep your website performing at its best. Actively manage updates, security, and ongoing changes so your digital presence stays reliable and professional.
       </p>
     </div>
 
@@ -594,20 +576,20 @@
     My Latest Work
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
 
     <!-- Executive Travel Card -->
-    <div  class="flip-card w-full min-h-[28rem]">
-      <div class="flip-inner relative w-full h-full">
+    <div  class="flip-card w-full flex flex-col min-h-[30rem]">
+      <div class="flip-inner relative w-full flex-1">
 
         <!-- Front -->
-        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
+        <div class="flip-front h-full absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
           <a href="https://chrystalexecutivetravel.co.uk/" target="_blank" rel="noopener">
-            <img src="images/exectravel.png" alt="Executive Travel Website" class="w-full h-48 object-cover">
+            <img src="images/exectravel.webp" alt="Executive Travel Website" class="w-full h-48 object-cover">
           </a>
           <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-xl font-semibold mb-2">Executive Travel Website</h3>
-            <p class="mb-4">A sleek, modern site for a premium travel service.</p>
+            <h3 class="text-xl font-semibold mb-2">Executive Travel</h3>
+            <p class="mb-4">A sleek, modern website for a premium travel service.</p>
             <p class="mb-4">Custom HTML/CSS/JS/Tailwind build. Hosting and management included.</p>
             <a href="https://chrystalexecutivetravel.co.uk/"
                class="mt-auto inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition">
@@ -617,11 +599,11 @@
         </div>
 
         <!-- Back -->
-        <div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
+        <div class="flip-back h-full absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
   
   <!-- Image at the top -->
   <a href="https://chrystalexecutivetravel.co.uk/" target="_blank" rel="noopener">
-    <img src="images/chrystal_audit.png" alt="Executive Travel Website" class="w-full h-48 object-cover">
+    <img src="images/chrystal_audit.webp" alt="Executive Travel Website" class="w-full h-48 object-cover">
   </a>
   
   <!-- Text content -->
@@ -638,17 +620,17 @@
     </div>
 
     <!-- Cosmetic Dentistry Card -->
-    <div  class="flip-card w-full min-h-[28rem]">
-      <div class="flip-inner relative w-full h-full">
+    <div  class="flip-card w-full flex flex-col min-h-[30rem]">
+      <div class="flip-inner relative w-full flex-1">
 
         <!-- Front -->
-        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
+        <div class="flip-front h-full absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-lg overflow-hidden">
           <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener noreferrer">
-            <img src="images/smileplanner.png" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
+            <img src="images/smileplanner.webp" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
           </a>
           <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-xl font-semibold mb-2">Cosmetic Dentistry Website</h3>
-            <p class="mb-4">A clean, modern site for a dental agency service.</p>
+            <h3 class="text-xl font-semibold mb-2">Cosmetic Dentistry</h3>
+            <p class="mb-4">A clean, modern website for a dental agency service.</p>
             <p class="mb-4">Designed and developed with HTML, CSS, JavaScript and Tailwind.</p>
             <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener" class="mt-auto inline-block px-4 py-2 bg-gradient-to-l from-cyan-500 to-purple-500 text-white rounded-lg text-sm hover:scale-110 transition">
               Visit Site
@@ -657,11 +639,11 @@
         </div>
 
       <!-- Back -->
-<div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
+<div class="flip-back h-full absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col rounded-2xl overflow-hidden">
   
   <!-- Image at the top -->
   <a href="https://smileplanneruk-turkey.com/" target="_blank" rel="noopener noreferrer">
-    <img src="images/smileplanner audit.png" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
+    <img src="images/smileplanner audit.webp" alt="Cosmetic Dentistry Website" class="w-full h-48 object-cover">
   </a>
   
   <!-- Text content -->
@@ -677,11 +659,11 @@
     </div>
 
     <!-- Styled Calculator Card -->
-    <div  class="flip-card w-full min-h-[28rem]">
-      <div class="flip-inner relative w-full h-full">
+    <div  class="flip-card w-full flex flex-col min-h-[30rem]">
+      <div class="flip-inner relative w-full flex-1">
 
         <!-- Front -->
-        <div class="flip-front absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-2xl overflow-hidden">
+        <div class="flip-front h-full absolute inset-0 bg-white dark:bg-gray-800 shadow-md flex flex-col rounded-2xl overflow-hidden">
           <a href="https://styled-calculator.netlify.app/" target="_blank" rel="noopener" aria-label="Styled Calculator App">
             <img src="images/calculator.png" alt="Styled Calculator Application" class="w-full h-48 object-cover">
           </a>
@@ -696,7 +678,7 @@
         </div>
 
        <!-- Back -->
-<div class="flip-back absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col items-center justify-center rounded-2xl overflow-hidden">
+<div class="flip-back h-full absolute inset-0 bg-gradient-to-l from-cyan-400 to-purple-600 text-white flex flex-col items-center justify-center rounded-2xl overflow-hidden">
   
   
   <!-- Text content -->
@@ -718,7 +700,7 @@
   <!-- Parallax code background -->
   <!-- Parallax container -->
   <div id="code-container" class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-    <pre id="code-bg" class="text-cyan-400 font-mono text-lg leading-snug whitespace-pre-wrap"></pre>
+    <pre id="code-bg" class="text-cyan-600 p-2 font-mono text-lg leading-snug whitespace-pre-wrap"></pre>
   </div>
 
   <!-- Testimonial card -->
@@ -745,10 +727,10 @@
   <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-12">
 
     <!-- Transition Question -->
-    <h2 class="font-header text-4xl md:text-5xl lg:text-6xl font-bold text-gray-50 leading-tight">
+    <h2 class="font-header text-2xl sm:3xl md:text-4xl lg:text-5xl font-bold text-gray-50 leading-tight">
       Ready to turn your website into a powerful growth engine?
     </h2>
-    <p class="text-xl md:text-2xl text-gray-50 max-w-4xl">
+    <p class="text-lg md:text-2xl text-gray-50 max-w-4xl">
       No matter where you are in your online journey, I offer tailored packages designed to generate leads, boost revenue, and scale with your business.
     </p>
 
@@ -757,7 +739,7 @@
       
       <!-- Card 1: Landing Page -->
       <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full cursor-pointer transform transition-transform duration-300 z-10 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Landing Page Package: Fast website for new businesses">
-        <h3 class="text-2xl font-bold mb-5 bg-gradient-to-l from-cyan-500 to-cyan-700 bg-clip-text text-transparent md:text-3xl">Landing Page</h3>
+        <h3 class="text-2xl font-header font-bold mb-5 bg-gradient-to-l from-cyan-500 to-cyan-700 bg-clip-text text-transparent md:text-3xl">Landing Page</h3>
         <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
           Launch quickly with a <strong>website built for your brand, message, and business goals</strong>. Get live in days with all essentials to engage your customers.
         </p>
@@ -781,7 +763,7 @@
 
       <!-- Card 2: Business Website -->
       <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full cursor-pointer transform transition-transform duration-300 z-20 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Business Website Package: Refresh or upgrade your website">
-        <h3 class="text-2xl font-bold mb-4 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent md:text-3xl">Business Website</h3>
+        <h3 class="text-2xl font-header font-bold mb-4 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent md:text-3xl">Business Website</h3>
         <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
           Refresh your website or replace a slow, outdated template. Build a site that <strong>generates leads, showcases your brand, and supports business growth</strong>.
         </p>
@@ -804,7 +786,7 @@
 
       <!-- Card 3: Custom Integration -->
       <div tabindex="0" class="package-card flex flex-col flex-1 h-auto md:basis-1/3 bg-white dark:bg-gray-600 rounded-3xl shadow-xl p-6 w-full  cursor-pointer transform transition-transform duration-300 z-30 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400" aria-label="Custom Integration Package: Ecommerce and advanced features">
-        <h3 class="text-2xl font-bold mb-4 bg-gradient-to-l from-purple-500 to-purple-700 bg-clip-text text-transparent md:text-3xl">Custom Integration</h3>
+        <h3 class="text-2xl font-header font-bold mb-4 bg-gradient-to-l from-purple-500 to-purple-700 bg-clip-text text-transparent md:text-3xl">Custom Integration</h3>
         <p class="text-gray-600 dark:text-gray-50 mb-4 text-lg text-left">
           Build a fully-featured website or online store that <strong>scales your business</strong>. Add advanced features, integrate systems, and drive revenue as your site grows.
         </p>
@@ -830,7 +812,7 @@
 
     <!-- Hosting & Management -->
     <div class="mt-12 text-center text-gray-50 shadow-lg p-6 rounded-xl">
-      <h3 class="text-2xl font-semibold mb-4">Care Plan</h3>
+      <h3 class="text-2xl font-semibold mb-4 font-header">Care Plan</h3>
       <p class="text-xl mb-4">Keep your website secure, fast, and up-to-date. Plans start at <strong>£35/month</strong>.</p>
       <ul class="space-y-1">
         <li>✔ Regular updates & backups</li>
@@ -854,7 +836,7 @@
         >
           Let's build something amazing!
         </h2>
-        <p class="text-xl font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
+        <p class="text-lg sm:text-2xl font-semibold text-gray-50 mt-5 mb-5 max-w-3xl">
        Let's create something that grows with you - be that a fresh website, custom code or something in between!
         </p>
 
@@ -927,7 +909,7 @@
         <h2
           class="text-2xl sm:text-lg md:text-2xl font-bold text-center text-gray-900 mb-6"
         >
-          Help us understand your needs
+          Help me understand your needs
         </h2>
 
         <!-- Success message -->
@@ -936,7 +918,7 @@
           name="contact"
           class="text-[var(--color-lagoon)] font-semibold text-center hidden"
         >
-          Thank you! We’ll be in touch soon.
+          Thank you! I’ll be in touch soon.
         </p>
 
         <!-- Booking Form -->
@@ -1134,9 +1116,8 @@
      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
       <!-- Section start -->
       <h2 class="font-header text-2xl sm:text-4xl font-extrabold text-center mt-5 mb-10  bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent">About Me</h2>
-      <p class="text-xl text-center font-semibold mt-5">
-        I'm a passionate Frontend Developer who loves combining modern web
-        technologies with thoughtful design, and brings brands to life online in
+      <p class="text-lg sm:text-xl text-center font-semibold mt-5">
+        I love combining modern web technologies with thoughtful design, and bring brands to life online in
         a way that is both engaging and functional.
       </p>
       <!-- 2 col grid with text/image -->
@@ -1146,18 +1127,18 @@
         <!-- text column -->
         <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
           <h3 class="text-xl text-center font-semibold mt-5 mb-5">My Journey</h3>
-          <p class="text-left mt-2 text-lg">
+          <p class="text-left mt-2 text-md sm:text-lg">
             My journey into frontend development started with curiosity about
             how websites work. After 13+ years in IT, helping organizations
             optimize datacenters and operations, I realized I wanted to
             understand how technology is experienced by end users.
           </p>
-          <p class="text-left mt-2 text-lg">
+          <p class="text-left mt-2 text-md sm:text-lg">
             What began as tinkering with HTML and CSS has grown into a full
             skill set that allows me to build beautiful, responsive, and
             functional websites.
           </p>
-          <p class="text-left mt-2 text-lg">
+          <p class="text-left mt-2 text-md sm:text-lg">
             I’m passionate about writing clean, maintainable code and designing
             interfaces that are intuitive and accessible. Whether using modern
             website builders or coding from scratch, I focus on simplicity and
@@ -1243,9 +1224,9 @@
     <footer
       class="relative max-w-7xl w-full mx-auto overflow-hidden p-10 bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50 z-10">
     
-      <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class=" sm:pt-16 lg:pt-24">
+      <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" class="max-w-3xl sm:pt-16 lg:pt-24">
         <div
-          class="px-4 mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden"
+          class="px-4 mx-auto sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 w-full overflow-hidden"
         >
           <!-- Company Links -->
           <div>
@@ -1306,7 +1287,7 @@
 
           <!-- Social Links -->
           <div
-            class="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
+            class="flex flex-col w-full items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-50"
           >
             <h2 class="font-semibold tracking-widest text-xl uppercase text-center">
               Connect / Follow 
@@ -1320,17 +1301,17 @@
                 class="hover:scale-110" aria-label="View the GitHub profile of BuiltByAndy"
               >
                 <i
-                  class="fa-brands fa-github m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-github m-2 text-3xl md:text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
               <a href="https://www.facebook.com/profile.php?id=61581209611043" target="_blank" class="hover:scale-110" aria-label="View the Facebook profile of BuiltByAndy"
                 ><i
-                  class="fa-brands fa-facebook m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-facebook m-2 text-3xl md:text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
               <a href="https://www.linkedin.com/company/builtbyandy/" target="_blank" class="hover:scale-110" aria-label="View the Linkedin profile of BuiltByAndy"
                 ><i
-                  class="fa-brands fa-linkedin m-2 text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-linkedin m-2 text-3xl md:text-5xl bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i
               ></a>
                <a
@@ -1340,7 +1321,7 @@
                 class="hover:scale-110 transition-transform" aria-label="Connect on Instagram with BuiltByAndy"
               >
                 <i
-                  class="fa-brands fa-instagram text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-instagram text-3xl md:text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i>
               </a>
               <a
@@ -1350,7 +1331,7 @@
                 class="hover:scale-110 transition-transform" aria-label="Connect on WhatsApp with BuiltByAndy"
               >
                 <i
-                  class="fa-brands fa-whatsapp text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
+                  class="fa-brands fa-whatsapp text-3xl md:text-5xl m-2 bg-gradient-to-l from-cyan-500 to-purple-500 bg-clip-text text-transparent"
                 ></i>
               </a>
             </div>
@@ -1416,25 +1397,14 @@
       </div>
     </footer>
  
-    <script>
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
+ <script src="/public/vendor/aos.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({ once: true });
   });
-
- // Animate code lines sequentially
-  const lines = document.querySelectorAll('#animated-code .line');
-  let index = 0;
-  function highlightLine() {
-    lines.forEach((line) => line.classList.remove('active'));
-    lines[index].classList.add('active');
-    index = (index + 1) % lines.length;
-  }
-  setInterval(highlightLine, 1000);
 </script>
   </body>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="script.js"></script>
 
   <script type="application/ld+json">
