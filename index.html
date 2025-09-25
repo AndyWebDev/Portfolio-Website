@@ -37,8 +37,9 @@
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="public/tailwind.css">
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="public/vendor/aos/aos.css">
+  <!-- AOS CSS -->
+<link rel="stylesheet" href="public/vendor/aos.css">
+
 
   <!-- Custom styles -->
   <link rel="stylesheet" href="styles.css">
@@ -135,8 +136,8 @@
           id="menu-toggle"
             type="button"
        aria-label="Open main menu">
-         <span class="inline-block w-10 h-10 mb-3">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-full h-full">
+         <span class="inline-block w-10 h-10 ">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576" class="w-full h-full">
     <defs>
       <linearGradient id="grad-address-card" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#06b6d4"/> <!-- cyan-500 -->
@@ -280,8 +281,7 @@
       </div>
 
       <!-- Overlay for text & tech -->
-      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs relative z-10 
-+             p-6 sm:p-10 md:p-16 rounded-xl w-full max-w-[90vw] sm:max-w-2xl md:max-w-3xl pb-12 sm:pb-24">
+      <div data-aos="zoom-in" data-aos-duration="2000ms" class="bg-black/20 backdrop-blur-xs relative z-10 p-6 sm:p-10 md:p-16 rounded-xl w-full max-w-[90vw] sm:max-w-2xl md:max-w-3xl pb-12 sm:pb-24">
         <div 
           id="hero-text"
           class="relative mx-auto z-20 text-center text-white px-6 py-8 bg-white/20 rounded-xl border-white/20 border backdrop-blur-lg max-w-3xl"
@@ -1535,10 +1535,14 @@
       </div>
     </footer>
  
- <script src="/public/vendor/aos.js" defer></script>
+ <script src="public/vendor/aos.js" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    AOS.init({ once: true });
+    AOS.init({
+      once: true,        // animations happen only once
+      duration: 800,     // animation duration in ms
+      easing: 'ease-in-out', // easing function
+    });
   });
 </script>
   </body>
